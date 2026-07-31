@@ -1664,22 +1664,30 @@ fun UserDashboard(
     onTabChange: (Int) -> Unit,
     onViewHospitals: () -> Unit,
     onViewHealthTips: () -> Unit,
-    onViewContacts: () -> Unit
+    onViewContacts: () -> Unit,
+    onViewRequestDetails: (Int) -> Unit
 ) {
     val profileState by userViewModel.profileState
+    val trackingState by userViewModel.trackingState
     
     LaunchedEffect(Unit) {
         userViewModel.fetchProfile()
+        // Check for active requests to show the banner
+        userViewModel.fetchHistory()
     }
     
     val userName = when (profileState) {
         is UserUiState.Success -> (profileState as UserUiState.Success<UserProfile>).data.fullName
-        else -> "Rahul"
+        else -> "Citizen"
     }
+
+    val activeRequest = if (trackingState is UserUiState.Success) {
+        (trackingState as UserUiState.Success<TrackResponse>).data
+    } else null
 
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = LightBg
+        color = MidnightBlue
     ) {
         Column(
             modifier = Modifier
@@ -1694,83 +1702,129 @@ fun UserDashboard(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(
-                    text = "RapidRescue",
-                    fontSize = 22.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = DeepBlue
-                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(modifier = Modifier.size(32.dp).background(AccentRed, RoundedCornerShape(8.dp)), contentAlignment = Alignment.Center) {
+                        Icon(Icons.Default.Security, null, tint = Color.White, modifier = Modifier.size(18.dp))
+                    }
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Text(
+                        text = "SAFEREACH",
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        color = Color.White,
+                        letterSpacing = 1.sp
+                    )
+                }
                 IconButton(onClick = onViewNotifications) {
-                    Icon(Icons.Default.NotificationsNone, contentDescription = "Notifications", tint = DeepBlue)
+                    Icon(Icons.Default.NotificationsNone, contentDescription = "Notifications", tint = TextGray)
                 }
             }
 
             Column(modifier = Modifier.padding(horizontal = 24.dp)) {
-                Text(text = "Hi, $userName", fontSize = 16.sp, color = Color.Gray)
-                Text(text = "How can we help you today?", fontSize = 18.sp, fontWeight = FontWeight.Medium, color = Color.DarkGray)
+                Text(text = "Hi, $userName", fontSize = 14.sp, color = TextGray, fontWeight = FontWeight.Bold)
+                Text(text = "How can we help today?", fontSize = 24.sp, fontWeight = FontWeight.Black, color = Color.White)
                 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Request Ambulance Card
+                // Floating Active Request Banner (Matching React)
+                activeRequest?.let { req ->
+                    if (req.status.lowercase() != "completed" && req.status.lowercase() != "cancelled") {
+                        Card(
+                            modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
+                            shape = RoundedCornerShape(24.dp),
+                            colors = CardDefaults.cardColors(containerColor = Color(0xFF451A03).copy(alpha = 0.4f)),
+                            border = BorderStroke(1.dp, Color(0xFFF59E0B).copy(alpha = 0.2f)),
+                            onClick = { onViewRequestDetails(req.requestId) }
+                        ) {
+                            Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+                                Box(modifier = Modifier.size(40.dp).background(Color(0xFFF59E0B).copy(alpha = 0.1f), RoundedCornerShape(12.dp)), contentAlignment = Alignment.Center) {
+                                    Icon(Icons.Default.Warning, null, tint = Color(0xFFF59E0B), modifier = Modifier.size(20.dp))
+                                }
+                                Spacer(modifier = Modifier.width(16.dp))
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Text("ACTIVE EMERGENCY", fontSize = 10.sp, fontWeight = FontWeight.Black, color = Color.White, letterSpacing = 1.sp)
+                                    Text("Status: ${req.status.uppercase()}", fontSize = 13.sp, color = TextGray)
+                                }
+                                Icon(Icons.AutoMirrored.Filled.ArrowForward, null, tint = Color(0xFFF59E0B), modifier = Modifier.size(20.dp))
+                            }
+                        }
+                    }
+                }
+
+                // Request Ambulance Card (Matching React Gradient/Style)
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(200.dp),
-                    shape = RoundedCornerShape(24.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFFC62828)),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+                        .height(220.dp),
+                    shape = RoundedCornerShape(32.dp),
+                    colors = CardDefaults.cardColors(containerColor = AccentRed),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
                     onClick = onRequestAmbulance
                 ) {
-                    Column(
-                        modifier = Modifier.fillMaxSize(),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center
-                    ) {
-                        Box(
-                            modifier = Modifier
-                                .size(70.dp)
-                                .clip(CircleShape)
-                                .background(Color.White.copy(alpha = 0.2f)),
-                            contentAlignment = Alignment.Center
+                    Box(modifier = Modifier.fillMaxSize()) {
+                        // Background decoration
+                        Box(modifier = Modifier.align(Alignment.Center).size(300.dp).background(Color.White.copy(alpha = 0.05f), CircleShape))
+                        
+                        Column(
+                            modifier = Modifier.fillMaxSize().padding(24.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
                         ) {
-                            Text(text = "*", color = Color.White, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+                            Box(
+                                modifier = Modifier
+                                    .size(64.dp)
+                                    .background(Color.White.copy(alpha = 0.15f), CircleShape)
+                                    .border(1.dp, Color.White.copy(alpha = 0.2f), CircleShape),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(text = "*", color = Color.White, fontSize = 42.sp, fontWeight = FontWeight.Black)
+                            }
+                            Spacer(modifier = Modifier.height(20.dp))
+                            Text(
+                                text = "REQUEST EMERGENCY",
+                                color = Color.White,
+                                fontSize = 18.sp,
+                                fontWeight = FontWeight.Black,
+                                letterSpacing = 1.sp
+                            )
+                            Text(
+                                text = "AMBULANCE",
+                                color = Color.White,
+                                fontSize = 18.sp,
+                                fontWeight = FontWeight.Black,
+                                letterSpacing = 1.sp
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Text(
+                                text = "Instant medical dispatch routing",
+                                color = Color.White.copy(alpha = 0.8f),
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold
+                            )
                         }
-                        Spacer(modifier = Modifier.height(16.dp))
-                        Text(
-                            text = "REQUEST AMBULANCE",
-                            color = Color.White,
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.ExtraBold
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Text(
-                            text = "Immediate medical assistance in 1-click",
-                            color = Color.White.copy(alpha = 0.9f),
-                            fontSize = 14.sp
-                        )
                     }
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Features Grid
+                // Features Grid (Darker, High-tech style)
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                     FeatureCard(
                         modifier = Modifier.weight(1f),
                         icon = Icons.AutoMirrored.Filled.Assignment,
                         title = "My Requests",
-                        subtitle = "Track your history",
-                        iconBg = Color(0xFFE8EAF6),
-                        iconColor = Color(0xFF3F51B5),
+                        subtitle = "Track history",
+                        iconBg = Color(0xFF6366F1).copy(alpha = 0.1f),
+                        iconColor = Color(0xFF818CF8),
                         onClick = { onTabChange(1) }
                     )
                     FeatureCard(
                         modifier = Modifier.weight(1f),
-                        icon = Icons.Default.VerifiedUser,
+                        icon = Icons.Default.Shield,
                         title = "Health Tips",
-                        subtitle = "Stay safe & informed",
-                        iconBg = Color(0xFFE8F5E9),
-                        iconColor = Color(0xFF4CAF50),
+                        subtitle = "Stay safe",
+                        iconBg = Color(0xFF10B981).copy(alpha = 0.1f),
+                        iconColor = Color(0xFF34D399),
                         onClick = onViewHealthTips
                     )
                 }
@@ -1778,38 +1832,41 @@ fun UserDashboard(
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                     FeatureCard(
                         modifier = Modifier.weight(1f),
-                        icon = Icons.Default.LocalHospital,
+                        icon = Icons.Default.Business,
                         title = "Hospitals",
-                        subtitle = "Nearby facilities",
-                        iconBg = Color(0xFFFFEBEE),
-                        iconColor = Color(0xFFE91E63),
+                        subtitle = "Nearby ERs",
+                        iconBg = Color(0xFFF43F5E).copy(alpha = 0.1f),
+                        iconColor = Color(0xFFFB7185),
                         onClick = onViewHospitals
                     )
                     FeatureCard(
                         modifier = Modifier.weight(1f),
-                        icon = Icons.Default.Contacts,
-                        title = "Emergency Contacts",
-                        subtitle = "Police, Fire, SOS",
-                        iconBg = Color(0xFFF5F5F5),
-                        iconColor = Color(0xFF616161),
+                        icon = Icons.Default.PhoneInTalk,
+                        title = "Emergency",
+                        subtitle = "SOS Contacts",
+                        iconBg = Color(0xFF64748B).copy(alpha = 0.1f),
+                        iconColor = Color(0xFF94A3B8),
                         onClick = onViewContacts
                     )
                 }
 
+                Spacer(modifier = Modifier.height(32.dp))
+                
+                // Version/Copyright matching web footer style
+                Text(
+                    text = "© 2026 SAFEREACH EMERGENCY SYSTEM",
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Center,
+                    fontSize = 10.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = TextGray.copy(alpha = 0.5f),
+                    letterSpacing = 1.sp
+                )
                 Spacer(modifier = Modifier.height(24.dp))
-
-                // Location Card
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 24.dp),
-                    shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = border(1.dp, Color.LightGray.copy(alpha = 0.3f))
-                ) {
-                    Row(
-                        modifier = Modifier.padding(16.dp),
-                        verticalAlignment = Alignment.CenterVertically
+            }
+        }
+    }
+}
                     ) {
                         Box(
                             modifier = Modifier
@@ -2484,8 +2541,38 @@ fun DriverHomeScreen(
                         targetLat = trackingData.destinationHospital.latitude
                         targetLng = trackingData.destinationHospital.longitude
                     } else {
-                        targetLat = 12.9716
-                        targetLng = 77.5946
+                        targetLat = 12.9716@Composable
+fun DriverHomeScreen(
+    driverViewModel: DriverViewModel,
+    onLogout: () -> Unit,
+    onNewRequest: () -> Unit
+) {
+    val statusState by driverViewModel.statusState
+    var isOnline by remember { mutableStateOf(true) }
+    var selectedTab by remember { mutableIntStateOf(0) }
+    var currentLat by remember { mutableDoubleStateOf(13.0232) }
+    var currentLng by remember { mutableDoubleStateOf(80.0175) }
+
+    // Periodically update location when online with simulated telemetry (Chennai default)
+    LaunchedEffect(isOnline) {
+        if (isOnline) {
+            while (true) {
+                val trackingState = driverViewModel.trackingState.value
+                if (trackingState is DriverUiState.Success) {
+                    val trackingData = trackingState.data
+                    val status = trackingData.status.lowercase()
+                    val targetLat: Double
+                    val targetLng: Double
+                    
+                    if (status == "accepted" || status == "arrived") {
+                        targetLat = trackingData.pickup.latitude
+                        targetLng = trackingData.pickup.longitude
+                    } else if (status == "boarded" && trackingData.destinationHospital != null) {
+                        targetLat = trackingData.destinationHospital.latitude
+                        targetLng = trackingData.destinationHospital.longitude
+                    } else {
+                        targetLat = 13.0232
+                        targetLng = 80.0175
                     }
 
                     // Linear interpolation (15% closer every step)
@@ -2501,100 +2588,152 @@ fun DriverHomeScreen(
 
     Scaffold(
         bottomBar = {
-            NavigationBar(containerColor = Color.White) {
-                NavigationBarItem(selected = selectedTab == 0, onClick = { selectedTab = 0 }, icon = { Icon(Icons.Default.Home, null) }, label = { Text("Home") }, colors = NavigationBarItemDefaults.colors(selectedIconColor = Color.White, indicatorColor = DeepBlue))
-                NavigationBarItem(selected = selectedTab == 1, onClick = { selectedTab = 1 }, icon = { Icon(Icons.AutoMirrored.Filled.Assignment, null) }, label = { Text("History") })
-                NavigationBarItem(selected = selectedTab == 2, onClick = { selectedTab = 2 }, icon = { Icon(Icons.Default.Person, null) }, label = { Text("Profile") })
+            NavigationBar(containerColor = MidnightBlue, tonalElevation = 8.dp) {
+                NavigationBarItem(
+                    selected = selectedTab == 0, 
+                    onClick = { selectedTab = 0 }, 
+                    icon = { Icon(Icons.Default.Dashboard, null) }, 
+                    label = { Text("Missions") }, 
+                    colors = NavigationBarItemDefaults.colors(selectedIconColor = Color.White, indicatorColor = AccentRed, selectedTextColor = Color.White, unselectedTextColor = TextGray)
+                )
+                NavigationBarItem(
+                    selected = selectedTab == 1, 
+                    onClick = { selectedTab = 1 }, 
+                    icon = { Icon(Icons.AutoMirrored.Filled.Assignment, null) }, 
+                    label = { Text("Log") },
+                    colors = NavigationBarItemDefaults.colors(selectedIconColor = Color.White, indicatorColor = AccentRed, selectedTextColor = Color.White, unselectedTextColor = TextGray)
+                )
+                NavigationBarItem(
+                    selected = selectedTab == 2, 
+                    onClick = { selectedTab = 2 }, 
+                    icon = { Icon(Icons.Default.Person, null) }, 
+                    label = { Text("Profile") },
+                    colors = NavigationBarItemDefaults.colors(selectedIconColor = Color.White, indicatorColor = AccentRed, selectedTextColor = Color.White, unselectedTextColor = TextGray)
+                )
             }
         }
     ) { padding ->
         Box(modifier = Modifier.padding(padding)) {
             when (selectedTab) {
                 0 -> {
-                    Surface(modifier = Modifier.fillMaxSize(), color = Color.White) {
+                    Surface(modifier = Modifier.fillMaxSize(), color = MidnightBlue) {
                         Column(modifier = Modifier.fillMaxSize()) {
-                            // Header
+                            // Header matching web
                             Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 16.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                                Text("RapidRescue", fontSize = 22.sp, fontWeight = FontWeight.Bold, color = DeepBlue)
                                 Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Surface(color = Color(0xFFF3F4F6), shape = RoundedCornerShape(20.dp)) {
-                                        Row(modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-                                            Text("ON", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = if(isOnline) DeepBlue else Color.Gray)
-                                            Switch(checked = isOnline, onCheckedChange = {
-                                                isOnline = it
-                                                driverViewModel.updateStatus(it)
-                                            }, modifier = Modifier.scale(0.6f), colors = SwitchDefaults.colors(checkedThumbColor = Color.White, checkedTrackColor = DeepBlue))
-                                            Text("OFF", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = if(!isOnline) DeepBlue else Color.Gray)
-                                        }
+                                    Box(modifier = Modifier.size(32.dp).background(AccentRed, RoundedCornerShape(8.dp)), contentAlignment = Alignment.Center) {
+                                        Icon(Icons.Default.LocalTaxi, null, tint = MidnightBlue, modifier = Modifier.size(18.dp))
                                     }
                                     Spacer(modifier = Modifier.width(12.dp))
-                                    Icon(Icons.Default.NotificationsNone, null, tint = DeepBlue)
+                                    Text("RESPONDER PORTAL", fontSize = 14.sp, fontWeight = FontWeight.Black, color = Color.White, letterSpacing = 1.sp)
+                                }
+                                
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Surface(color = DarkSteel, shape = RoundedCornerShape(20.dp)) {
+                                        Row(modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                                            Text(if(isOnline) "ONLINE" else "OFFLINE", fontSize = 10.sp, fontWeight = FontWeight.Black, color = if(isOnline) Color(0xFF10B981) else TextGray)
+                                            Spacer(modifier = Modifier.width(8.dp))
+                                            Switch(
+                                                checked = isOnline, 
+                                                onCheckedChange = { 
+                                                    isOnline = it
+                                                    driverViewModel.updateStatus(it)
+                                                }, 
+                                                modifier = Modifier.scale(0.6f), 
+                                                colors = SwitchDefaults.colors(checkedThumbColor = Color.White, checkedTrackColor = Color(0xFF10B981))
+                                            )
+                                        }
+                                    }
                                 }
                             }
 
                             Column(modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp).verticalScroll(rememberScrollState())) {
                                 Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
                                     Column {
-                                        Text("Welcome back,", fontSize = 14.sp, color = Color.Gray)
-                                        Text("Officer Rodriguez", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepBlue)
+                                        Text("Unit Operator,", fontSize = 14.sp, color = TextGray, fontWeight = FontWeight.Bold)
+                                        Text("Officer Rodriguez", fontSize = 18.sp, fontWeight = FontWeight.Black, color = Color.White)
                                     }
-                                    Box(modifier = Modifier.size(50.dp).clip(CircleShape).background(Color.LightGray)) {
-                                        Icon(Icons.Default.Person, null, modifier = Modifier.align(Alignment.Center).size(30.dp), tint = Color.White)
+                                    Box(modifier = Modifier.size(50.dp).background(DarkSteel, CircleShape).border(1.dp, Color.White.copy(alpha = 0.1f), CircleShape), contentAlignment = Alignment.Center) {
+                                        Icon(Icons.Default.Person, null, modifier = Modifier.size(30.dp), tint = Color.White)
                                     }
                                 }
 
                                 Spacer(modifier = Modifier.height(24.dp))
+                                
+                                // Stats (Matching web cards)
                                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                                    DriverStatCard(modifier = Modifier.weight(1f), icon = Icons.Default.Star, label = "Today's Trips", value = "12", iconColor = DeepBlue)
-                                    DriverStatCard(modifier = Modifier.weight(1f), icon = Icons.Default.Schedule, label = "Hours Online", value = "6.5h", iconColor = Color(0xFF2E7D32))
-                                }
-
-                                Spacer(modifier = Modifier.height(16.dp))
-                                Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = DeepBlue)) {
-                                    Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                                        Icon(Icons.Default.Star, null, tint = Color.White, modifier = Modifier.size(24.dp))
-                                        Spacer(modifier = Modifier.width(16.dp))
-                                        Column {
-                                            Text("User Rating", color = Color.White.copy(alpha = 0.7f), fontSize = 12.sp)
-                                            Text("4.92", color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                                        }
-                                    }
+                                    DriverStatCard(modifier = Modifier.weight(1f), icon = Icons.Default.Timer, label = "Avg. Dispatch", value = "4.2m", iconColor = Color(0xFF3B82F6))
+                                    DriverStatCard(modifier = Modifier.weight(1f), icon = Icons.Default.Map, label = "Shift Dist.", value = "12.4km", iconColor = Color(0xFF10B981))
                                 }
 
                                 Spacer(modifier = Modifier.height(24.dp))
-                                // Map Section
-                                Card(modifier = Modifier.fillMaxWidth().height(260.dp), shape = RoundedCornerShape(24.dp)) {
-                                    Box(modifier = Modifier.fillMaxSize()) {
-                                        Box(modifier = Modifier.fillMaxSize().background(Color(0xFFE5E7EB)))
-                                        Box(modifier = Modifier.align(Alignment.Center).size(200.dp).border(1.dp, DeepBlue.copy(alpha = 0.3f), CircleShape))
-                                        Box(modifier = Modifier.align(Alignment.Center).size(48.dp).clip(CircleShape).background(DeepBlue).border(2.dp, Color.White, CircleShape), contentAlignment = Alignment.Center) {
-                                            Icon(Icons.Default.LocalTaxi, null, tint = Color.White, modifier = Modifier.size(24.dp))
-                                        }
-                                        Card(modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp), shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.9f))) {
-                                            Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-                                                Column(modifier = Modifier.weight(1f)) {
-                                                    Text("Searching for requests...", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = DeepBlue)
-                                                    Text("Stay within high-demand zones for faster dispatch.", fontSize = 11.sp, color = Color.Gray)
-                                                }
-                                                Button(
-                                                    onClick = onNewRequest,
-                                                    colors = ButtonDefaults.buttonColors(containerColor = DeepBlue),
-                                                    shape = RoundedCornerShape(12.dp)
-                                                ) {
-                                                    Text("VIEW", fontSize = 10.sp, fontWeight = FontWeight.Bold)
-                                                }
+                                
+                                // Telemetry Simulator Card (Matching React Driver dashboard)
+                                Card(
+                                    modifier = Modifier.fillMaxWidth(), 
+                                    shape = RoundedCornerShape(24.dp), 
+                                    colors = CardDefaults.cardColors(containerColor = DarkSteel.copy(alpha = 0.5f)),
+                                    border = BorderStroke(1.dp, Color.White.copy(alpha = 0.05f))
+                                ) {
+                                    Column(modifier = Modifier.padding(20.dp)) {
+                                        Text("GPS TELEMETRY SIMULATOR", fontSize = 9.sp, fontWeight = FontWeight.Black, color = TextGray, letterSpacing = 1.sp)
+                                        Spacer(modifier = Modifier.height(12.dp))
+                                        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                                            Column {
+                                                Text("Lat: ${currentLat.toFixed(6)}", color = Color.White, fontSize = 13.sp, fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace)
+                                                Text("Lng: ${currentLng.toFixed(6)}", color = Color.White, fontSize = 13.sp, fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace)
+                                            }
+                                            IconButton(
+                                                onClick = { /* In real app, toggle GPS watch */ },
+                                                modifier = Modifier.background(Color.White.copy(alpha = 0.05f), CircleShape)
+                                            ) {
+                                                Icon(Icons.Default.SettingsInputAntenna, null, tint = AccentRed, modifier = Modifier.size(20.dp))
                                             }
                                         }
                                     }
                                 }
 
                                 Spacer(modifier = Modifier.height(24.dp))
-                                Text("Nearby Support", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray)
-                                Spacer(modifier = Modifier.height(12.dp))
-                                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                                    SupportChip(icon = Icons.Default.LocalHospital, label = "Central Gen: 4m away")
-                                    SupportChip(icon = Icons.Default.LocalFireDepartment, label = "Station 12")
+                                
+                                // Map Section (Responder Dark Mode)
+                                Card(
+                                    modifier = Modifier.fillMaxWidth().height(300.dp), 
+                                    shape = RoundedCornerShape(32.dp),
+                                    border = BorderStroke(1.dp, Color.White.copy(alpha = 0.05f))
+                                ) {
+                                    Box(modifier = Modifier.fillMaxSize().background(MidnightBlue)) {
+                                        // Map grid lines simulation
+                                        Icon(Icons.Default.Grid4x4, null, modifier = Modifier.fillMaxSize().padding(32.dp), tint = Color.White.copy(alpha = 0.03f))
+                                        
+                                        // Unit Marker
+                                        Box(modifier = Modifier.align(Alignment.Center)) {
+                                            Icon(Icons.Default.Navigation, null, tint = Color(0xFF10B981), modifier = Modifier.size(32.dp).rotate(45f))
+                                        }
+
+                                        Card(
+                                            modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp).fillMaxWidth(), 
+                                            shape = RoundedCornerShape(20.dp), 
+                                            colors = CardDefaults.cardColors(containerColor = MidnightBlue.copy(alpha = 0.9f)),
+                                            border = BorderStroke(1.dp, Color.White.copy(alpha = 0.1f))
+                                        ) {
+                                            Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+                                                Column(modifier = Modifier.weight(1f)) {
+                                                    Text("SCANNING INCIDENT BOARD...", fontSize = 11.sp, fontWeight = FontWeight.Black, color = Color.White, letterSpacing = 1.sp)
+                                                    Text("Matching nearest clinical requests", fontSize = 11.sp, color = TextGray)
+                                                }
+                                                Button(
+                                                    onClick = onNewRequest,
+                                                    colors = ButtonDefaults.buttonColors(containerColor = AccentRed),
+                                                    shape = RoundedCornerShape(12.dp),
+                                                    contentPadding = PaddingValues(horizontal = 16.dp)
+                                                ) {
+                                                    Text("PULL", fontSize = 10.sp, fontWeight = FontWeight.Black)
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
+
                                 Spacer(modifier = Modifier.height(32.dp))
                             }
                         }
@@ -4279,46 +4418,91 @@ fun AdminOverviewScreen(adminViewModel: AdminViewModel, onLogout: () -> Unit, on
     val totalRequests = if (requestsState is AdminUiState.Success) (requestsState as AdminUiState.Success).data.size.toString() else "0"
     val activeHospitals = if (hospitalsState is AdminUiState.Success) (hospitalsState as AdminUiState.Success).data.size.toString() else "0"
 
-    Column(modifier = Modifier.fillMaxSize().background(Color(0xFFF8F9FA)).padding(16.dp).verticalScroll(rememberScrollState())) {
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-            Icon(Icons.Default.Menu, null, tint = DeepBlue)
-            Text("Overview", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = DeepBlue)
-            Icon(Icons.Default.NotificationsNone, null, tint = DeepBlue)
+    Surface(modifier = Modifier.fillMaxSize(), color = MidnightBlue) {
+        Column(modifier = Modifier.fillMaxSize().padding(16.dp).verticalScroll(rememberScrollState())) {
+            Row(modifier = Modifier.fillMaxWidth().padding(vertical = 12.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(modifier = Modifier.size(36.dp).background(AccentRed, RoundedCornerShape(10.dp)), contentAlignment = Alignment.Center) {
+                        Icon(Icons.Default.Shield, null, tint = MidnightBlue, modifier = Modifier.size(20.dp))
+                    }
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Column {
+                        Text("COMMAND CENTER", fontSize = 14.sp, fontWeight = FontWeight.Black, color = Color.White, letterSpacing = 1.sp)
+                        Text("System Operations", fontSize = 10.sp, color = TextGray, fontWeight = FontWeight.Bold)
+                    }
+                }
+                IconButton(onClick = { /* Noti */ }, modifier = Modifier.background(DarkSteel, CircleShape)) {
+                    Icon(Icons.Default.NotificationsNone, null, tint = Color.White, modifier = Modifier.size(20.dp))
+                }
+            }
+            
+            Spacer(modifier = Modifier.height(24.dp))
+            
+            // Stats Grid (High contrast cards)
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                AdminStatCard(modifier = Modifier.weight(1f), title = "TOTAL CALLS", value = totalRequests, trend = "+12%", color = Color(0xFF3B82F6))
+                AdminStatCard(modifier = Modifier.weight(1f), title = "ACTIVE UNITS", value = "23", trend = "LIVE", color = Color(0xFF10B981))
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                AdminStatCard(modifier = Modifier.weight(1f), title = "HOSPITALS", value = activeHospitals, trend = "SYNCED", color = Color(0xFFF59E0B))
+                AdminStatCard(modifier = Modifier.weight(1f), title = "RESP. TIME", value = "4.2m", trend = "-0.5m", color = AccentRed)
+            }
+            
+            Spacer(modifier = Modifier.height(32.dp))
+            
+            Text("FLEET ASSETS", fontSize = 10.sp, fontWeight = FontWeight.Black, color = TextGray, letterSpacing = 1.sp)
+            Spacer(modifier = Modifier.height(16.dp))
+            
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(24.dp),
+                colors = CardDefaults.cardColors(containerColor = DarkSteel.copy(alpha = 0.5f)),
+                border = BorderStroke(1.dp, Color.White.copy(alpha = 0.05f)),
+                onClick = onViewUnitDetails
+            ) {
+                Row(modifier = Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Box(modifier = Modifier.size(48.dp).background(Color(0xFF10B981).copy(alpha = 0.1f), CircleShape), contentAlignment = Alignment.Center) {
+                        Icon(Icons.Default.LocalTaxi, null, tint = Color(0xFF10B981), modifier = Modifier.size(24.dp))
+                    }
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text("Manage Fleet Registry", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                        Text("Verify vehicle documents & tracking", color = TextGray, fontSize = 12.sp)
+                    }
+                    Icon(Icons.AutoMirrored.Filled.ArrowForward, null, tint = TextGray, modifier = Modifier.size(18.dp))
+                }
+            }
+            
+            Spacer(modifier = Modifier.height(48.dp))
+            TextButton(
+                onClick = onLogout, 
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.textButtonColors(contentColor = AccentRed.copy(alpha = 0.7f))
+            ) { 
+                Text("TERMINATE ADMIN SESSION", fontWeight = FontWeight.Black, fontSize = 11.sp, letterSpacing = 1.sp) 
+            }
         }
-        Spacer(modifier = Modifier.height(24.dp))
-        AdminStatCard(title = "Total Requests", value = totalRequests, trend = "+12%", icon = Icons.Default.Tsunami, iconBg = Color(0xFFE8EAF6))
-        Spacer(modifier = Modifier.height(16.dp))
-        AdminStatCard(title = "Active Ambulances", value = "23", trend = "Active Now", icon = Icons.Default.LocalTaxi, iconBg = Color(0xFFFFEBEE))
-        
-        TextButton(onClick = onViewUnitDetails, modifier = Modifier.padding(start = 64.dp)) {
-            Text("View Fleet Details", fontSize = 12.sp, color = DeepBlue, fontWeight = FontWeight.Bold)
-        }
-        
-        Spacer(modifier = Modifier.height(8.dp))
-        AdminStatCard(title = "Completed Today", value = "120", trend = "Total Today", icon = Icons.Default.CheckCircle, iconBg = Color(0xFFE8F5E9))
-        Spacer(modifier = Modifier.height(16.dp))
-        AdminStatCard(title = "Available Hospitals", value = activeHospitals, trend = "Operational", icon = Icons.Default.LocalHospital, iconBg = Color(0xFFF5F5F5))
-        
-        Spacer(modifier = Modifier.height(32.dp))
-        TextButton(onClick = onLogout, modifier = Modifier.align(Alignment.CenterHorizontally)) { Text("Logout System", color = AccentRed) }
     }
 }
 
 @Composable
-fun AdminStatCard(title: String, value: String, trend: String, icon: androidx.compose.ui.graphics.vector.ImageVector, iconBg: Color) {
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White)) {
-        Row(modifier = Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
-            Surface(modifier = Modifier.size(48.dp), color = iconBg, shape = RoundedCornerShape(12.dp)) {
-                Box(contentAlignment = Alignment.Center) { Icon(icon, null, tint = DeepBlue) }
+fun AdminStatCard(modifier: Modifier = Modifier, title: String, value: String, trend: String, color: Color) {
+    Card(
+        modifier = modifier, 
+        colors = CardDefaults.cardColors(containerColor = DarkSteel.copy(alpha = 0.5f)),
+        shape = RoundedCornerShape(24.dp),
+        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.05f))
+    ) {
+        Column(modifier = Modifier.padding(20.dp)) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                Text(title, fontSize = 9.sp, fontWeight = FontWeight.Black, color = TextGray, letterSpacing = 1.sp)
+                Surface(color = color.copy(alpha = 0.1f), shape = RoundedCornerShape(8.dp)) {
+                    Text(trend, modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp), color = color, fontSize = 8.sp, fontWeight = FontWeight.Black)
+                }
             }
-            Spacer(modifier = Modifier.width(16.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(title, fontSize = 13.sp, color = Color.Gray)
-                Text(value, fontSize = 24.sp, fontWeight = FontWeight.Bold, color = DeepBlue)
-            }
-            Surface(color = Color(0xFFE8F5E9), shape = RoundedCornerShape(12.dp)) {
-                Text(trend, modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp), fontSize = 10.sp, color = Color(0xFF2E7D32), fontWeight = FontWeight.Bold)
-            }
+            Spacer(modifier = Modifier.height(12.dp))
+            Text(value, fontSize = 28.sp, fontWeight = FontWeight.Black, color = Color.White)
         }
     }
 }
@@ -4419,79 +4603,174 @@ fun UnifiedRequestDetailsScreen(
     LaunchedEffect(requestId) {
         if (requestId != -1) {
             driverViewModel.fetchTrackingInfo(requestId)
+            // Start polling for real-time telemetry updates
+            while(true) {
+                driverViewModel.fetchTrackingInfo(requestId)
+                kotlinx.coroutines.delay(3000)
+            }
         }
     }
 
-    Surface(modifier = Modifier.fillMaxSize(), color = Color.White) {
+    Surface(modifier = Modifier.fillMaxSize(), color = MidnightBlue) {
         Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
-            Row(modifier = Modifier.fillMaxWidth().padding(top = 48.dp, bottom = 16.dp, start = 8.dp, end = 16.dp), verticalAlignment = Alignment.CenterVertically) {
-                IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = DeepBlue) }
-                Text("Request Details", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepBlue)
+            // Header with Request ID
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(top = 48.dp, bottom = 16.dp, start = 8.dp, end = 16.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
+                    Text("Telemetry Stream", fontSize = 18.sp, fontWeight = FontWeight.Black, color = Color.White)
+                }
+                Surface(color = DarkSteel, shape = RoundedCornerShape(8.dp)) {
+                    Text("#RR-$requestId", modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp), color = TextGray, fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                }
             }
 
-            if (trackingState is DriverUiState.Loading) {
+            if (trackingState is DriverUiState.Loading && requestId == -1) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator(color = DeepBlue)
+                    CircularProgressIndicator(color = AccentRed)
                 }
             } else if (trackingState is DriverUiState.Error) {
-                Text((trackingState as DriverUiState.Error).message, color = Color.Red, modifier = Modifier.padding(16.dp))
-            } else if (trackingState is DriverUiState.Success) {
-                val data = (trackingState as DriverUiState.Success).data
+                Text((trackingState as DriverUiState.Error).message, color = AccentRed, modifier = Modifier.padding(16.dp))
+            } else if (trackingState is DriverUiState.Success || (trackingState is DriverUiState.Loading && requestId != -1)) {
+                // If loading but we have a previous success, we still show the data for seamless updates
+                val data = if (trackingState is DriverUiState.Success) (trackingState as DriverUiState.Success).data else null
                 
-                Surface(color = Color(0xFFFFEBEE), modifier = Modifier.fillMaxWidth()) {
-                    Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
-                        Text("${data.status.uppercase()}: ${data.emergency.type}", color = AccentRed, fontWeight = FontWeight.Bold)
-                        Text("#RR-${data.requestId}", color = Color.Gray)
+                data?.let { stream ->
+                    // Status Strip
+                    val statusColor = when(stream.status.lowercase()) {
+                        "pending" -> Color(0xFFF59E0B)
+                        "accepted", "arrived" -> Color(0xFF3B82F6)
+                        "boarded" -> Color(0xFF10B981)
+                        "completed" -> Color(0xFF10B981)
+                        else -> AccentRed
                     }
-                }
-                
-                // Map Placeholder
-                Card(modifier = Modifier.fillMaxWidth().height(200.dp).padding(16.dp), shape = RoundedCornerShape(16.dp)) {
-                    Box(modifier = Modifier.fillMaxSize().background(Color(0xFFE5E7EB))) {
-                        Icon(Icons.Default.LocationOn, null, modifier = Modifier.align(Alignment.Center).size(48.dp), tint = DeepBlue)
-                    }
-                }
-                
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Text("Service Information", fontWeight = FontWeight.Bold, color = DeepBlue)
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color(0xFFF8F9FA))) {
-                        Column(modifier = Modifier.padding(16.dp)) {
+
+                    Surface(color = statusColor.copy(alpha = 0.15f), modifier = Modifier.fillMaxWidth()) {
+                        Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Icon(Icons.Default.Person, null, tint = Color.Gray)
+                                Box(modifier = Modifier.size(8.dp).background(statusColor, CircleShape))
                                 Spacer(modifier = Modifier.width(12.dp))
-                                Column {
-                                    Text("Patient", fontSize = 11.sp, color = Color.Gray)
-                                    Text(data.patient.name, fontWeight = FontWeight.Bold)
-                                }
+                                Text(stream.status.uppercase(), color = statusColor, fontWeight = FontWeight.Black, fontSize = 12.sp, letterSpacing = 1.sp)
                             }
-                            Spacer(modifier = Modifier.height(12.dp))
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Icon(Icons.Default.LocationOn, null, tint = Color.Gray)
-                                Spacer(modifier = Modifier.width(12.dp))
-                                Column {
-                                    Text("Pickup Address", fontSize = 11.sp, color = Color.Gray)
-                                    Text(data.pickup.address, fontSize = 13.sp)
+                            Text(stream.emergency.type, color = Color.White.copy(alpha = 0.9f), fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                        }
+                    }
+
+                    // Progress Timeline (Matching React)
+                    Card(
+                        modifier = Modifier.fillMaxWidth().padding(16.dp),
+                        shape = RoundedCornerShape(24.dp),
+                        colors = CardDefaults.cardColors(containerColor = DarkSteel.copy(alpha = 0.5f)),
+                        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.05f))
+                    ) {
+                        Column(modifier = Modifier.padding(20.dp)) {
+                            Text("DISPATCH TIMELINE", fontSize = 10.sp, fontWeight = FontWeight.Black, color = TextGray, letterSpacing = 1.sp)
+                            Spacer(modifier = Modifier.height(16.dp))
+                            
+                            val steps = listOf(
+                                "Request Placed" to stream.timestamps.created,
+                                "Unit Allocated" to stream.timestamps.accepted,
+                                "Arrived at Scene" to stream.timestamps.arrived,
+                                "Patient Boarded" to stream.timestamps.boarded
+                            )
+
+                            steps.forEachIndexed { index, step ->
+                                Row(verticalAlignment = Alignment.Top) {
+                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                        Box(
+                                            modifier = Modifier.size(16.dp).background(
+                                                if (step.second != null) statusColor else Color.White.copy(alpha = 0.1f), 
+                                                CircleShape
+                                            ),
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            if (step.second != null) Icon(Icons.Default.Check, null, tint = MidnightBlue, modifier = Modifier.size(10.dp))
+                                        }
+                                        if (index < steps.size - 1) {
+                                            Box(modifier = Modifier.width(1.dp).height(24.dp).background(Color.White.copy(alpha = 0.1f)))
+                                        }
+                                    }
+                                    Spacer(modifier = Modifier.width(16.dp))
+                                    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                                        Text(step.first, color = if (step.second != null) Color.White else TextGray, fontSize = 13.sp, fontWeight = if (step.second != null) FontWeight.Bold else FontWeight.Normal)
+                                        step.second?.let {
+                                            Text(it.split(" ").last().take(5), color = TextGray, fontSize = 11.sp, fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace)
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
-                    
-                    if (data.assignedAmbulance != null) {
+
+                    // Vitals Monitor (Streaming Data)
+                    stream.vitals?.let { vitals ->
+                        Text("LIVE VITALS TELEMETRY", modifier = Modifier.padding(horizontal = 24.dp), fontSize = 10.sp, fontWeight = FontWeight.Black, color = TextGray, letterSpacing = 1.sp)
+                        Row(modifier = Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                            VitalCard(modifier = Modifier.weight(1f), label = "HEART", value = "${vitals.heartRate}", unit = "BPM", icon = Icons.Default.Favorite, color = AccentRed)
+                            VitalCard(modifier = Modifier.weight(1f), label = "SPO2", value = "${vitals.oxygenSaturation}", unit = "%", icon = Icons.Default.Air, color = Color(0xFF3B82F6))
+                        }
+                        Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                            VitalCard(modifier = Modifier.weight(1f), label = "TEMP", value = "${vitals.temperature}", unit = "°C", icon = Icons.Default.DeviceThermostat, color = Color(0xFFF59E0B))
+                            VitalCard(modifier = Modifier.weight(1f), label = "B.P.", value = vitals.bloodPressure, unit = "mmHg", icon = Icons.Default.Speed, color = Color(0xFF10B981))
+                        }
+                    }
+
+                    // Assigned Unit Detail
+                    stream.assignedAmbulance?.let { amb ->
                         Spacer(modifier = Modifier.height(24.dp))
-                        Text("Assigned Unit", fontWeight = FontWeight.Bold, color = DeepBlue)
-                        Spacer(modifier = Modifier.height(12.dp))
-                        Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White), border = border(1.dp, Color.LightGray.copy(alpha = 0.3f))) {
-                            Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                                Box(modifier = Modifier.size(40.dp).clip(CircleShape).background(Color(0xFFE3F2FD)), contentAlignment = Alignment.Center) {
-                                    Icon(Icons.Default.LocalTaxi, null, tint = DeepBlue)
+                        Text("ALLOCATED RESPONDER", modifier = Modifier.padding(horizontal = 24.dp), fontSize = 10.sp, fontWeight = FontWeight.Black, color = TextGray, letterSpacing = 1.sp)
+                        Card(
+                            modifier = Modifier.fillMaxWidth().padding(16.dp),
+                            shape = RoundedCornerShape(24.dp),
+                            colors = CardDefaults.cardColors(containerColor = DarkSteel)
+                        ) {
+                            Row(modifier = Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
+                                Box(modifier = Modifier.size(52.dp).background(Color.White.copy(alpha = 0.05f), CircleShape), contentAlignment = Alignment.Center) {
+                                    Icon(Icons.Default.LocalTaxi, null, tint = statusColor, modifier = Modifier.size(28.dp))
                                 }
-                                Spacer(modifier = Modifier.width(12.dp))
+                                Spacer(modifier = Modifier.width(16.dp))
                                 Column(modifier = Modifier.weight(1f)) {
-                                    Text(data.assignedAmbulance.driverName, fontWeight = FontWeight.Bold)
-                                    Text(data.assignedAmbulance.vehicleNumber, fontSize = 12.sp, color = Color.Gray)
+                                    Text(amb.vehicleNumber, color = Color.White, fontWeight = FontWeight.Black, fontSize = 16.sp)
+                                    Text("${amb.driverName} • ${amb.type}", color = TextGray, fontSize = 12.sp)
                                 }
-                                IconButton(onClick = {}) { Icon(Icons.Default.Phone, null, tint = DeepBlue) }
+                                IconButton(onClick = { /* Call logic */ }, modifier = Modifier.background(statusColor.copy(alpha = 0.1f), CircleShape)) {
+                                    Icon(Icons.Default.Phone, null, tint = statusColor, modifier = Modifier.size(20.dp))
+                                }
+                            }
+                        }
+                    }
+
+                    // Map Placeholder (Matching React Map style)
+                    Card(
+                        modifier = Modifier.fillMaxWidth().height(250.dp).padding(16.dp),
+                        shape = RoundedCornerShape(32.dp),
+                        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.05f))
+                    ) {
+                        Box(modifier = Modifier.fillMaxSize().background(MidnightBlue)) {
+                            // Map pattern
+                            Icon(Icons.Default.Map, null, modifier = Modifier.align(Alignment.Center).size(80.dp), tint = Color.White.copy(alpha = 0.05f))
+                            
+                            // Ambulance position marker
+                            Box(modifier = Modifier.align(Alignment.Center).offset(x = 20.dp, y = (-30).dp)) {
+                                Icon(Icons.Default.LocationOn, null, tint = AccentRed, modifier = Modifier.size(32.dp))
+                            }
+                            
+                            Surface(
+                                modifier = Modifier.align(Alignment.TopLeft).padding(16.dp),
+                                color = MidnightBlue.copy(alpha = 0.8f),
+                                shape = RoundedCornerShape(12.dp),
+                                border = BorderStroke(1.dp, Color.White.copy(alpha = 0.1f))
+                            ) {
+                                Row(modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+                                    Box(modifier = Modifier.size(6.dp).background(Color(0xFF10B981), CircleShape).padding(2.dp)) {
+                                        Box(modifier = Modifier.fillMaxSize().background(Color.White, CircleShape))
+                                    }
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Text("LIVE GPS FEED", color = Color.White, fontSize = 9.sp, fontWeight = FontWeight.Black, letterSpacing = 1.sp)
+                                }
                             }
                         }
                     }
@@ -4499,12 +4778,41 @@ fun UnifiedRequestDetailsScreen(
                     Spacer(modifier = Modifier.height(32.dp))
                     Button(
                         onClick = onBack,
-                        modifier = Modifier.fillMaxWidth().height(56.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = DeepBlue),
-                        shape = RoundedCornerShape(12.dp)
+                        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp).height(64.dp),
+                        colors = ButtonColors(containerColor = DarkSteel, contentColor = Color.White, disabledContainerColor = DarkSteel, disabledContentColor = TextGray),
+                        shape = RoundedCornerShape(24.dp)
                     ) {
-                        Text("Return to Dashboard", fontWeight = FontWeight.Bold)
+                        Text("BACK TO COMMAND", fontWeight = FontWeight.Black, fontSize = 12.sp, letterSpacing = 1.sp)
                     }
+                    Spacer(modifier = Modifier.height(48.dp))
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun VitalCard(modifier: Modifier, label: String, value: String, unit: String, icon: androidx.compose.ui.graphics.vector.ImageVector, color: Color) {
+    Card(
+        modifier = modifier,
+        shape = RoundedCornerShape(24.dp),
+        colors = CardDefaults.cardColors(containerColor = DarkSteel.copy(alpha = 0.4f)),
+        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.05f))
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(label, fontSize = 9.sp, fontWeight = FontWeight.Black, color = TextGray, letterSpacing = 1.sp)
+                Icon(icon, null, tint = color.copy(alpha = 0.6f), modifier = Modifier.size(14.dp))
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Row(verticalAlignment = Alignment.Bottom) {
+                Text(value, fontSize = 20.sp, fontWeight = FontWeight.Black, color = Color.White)
+                Spacer(modifier = Modifier.width(4.dp))
+                Text(unit, fontSize = 10.sp, color = TextGray, modifier = Modifier.padding(bottom = 3.dp))
+            }
+        }
+    }
+}
                 }
             }
         }
