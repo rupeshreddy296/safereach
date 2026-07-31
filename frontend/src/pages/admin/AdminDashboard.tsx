@@ -81,7 +81,7 @@ const AdminDashboard: React.FC = () => {
       mapInstanceRef.current = new window.google.maps.Map(mapRef.current, {
         center: { lat: 13.0232, lng: 80.0175 }, // Default to Chennai
         zoom: 12,
-        mapTypeId: 'satellite',
+        mapTypeId: 'roadmap',
         disableDefaultUI: false,
       });
     }

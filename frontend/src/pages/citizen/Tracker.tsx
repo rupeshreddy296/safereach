@@ -59,6 +59,8 @@ const Tracker: React.FC = () => {
   const ambPinRef = useRef<google.maps.Marker | null>(null);
   const hospPinRef = useRef<google.maps.Marker | null>(null);
   const directionsRendererRef = useRef<google.maps.DirectionsRenderer | null>(null);
+  const lastRouteCoordsRef = useRef<{originLat: number, originLng: number, destLat: number, destLng: number} | null>(null);
+  const initialBoundsFitRef = useRef<boolean>(false);
 
   const [activeRequest, setActiveRequest] = useState<any>(null);
   const [etaText, setEtaText] = useState('ETA: Calculating...');
@@ -113,52 +115,75 @@ const Tracker: React.FC = () => {
       });
     }
 
-    // Clear old markers
-    if (patientPinRef.current) patientPinRef.current.setMap(null);
-    if (ambPinRef.current) ambPinRef.current.setMap(null);
-    if (hospPinRef.current) hospPinRef.current.setMap(null);
-
     const bounds = new google.maps.LatLngBounds();
     let hasBounds = false;
 
     // 1. Patient pickup pin
     if (data.pickup) {
       const pos = { lat: parseFloat(data.pickup.latitude), lng: parseFloat(data.pickup.longitude) };
-      patientPinRef.current = new google.maps.Marker({
-        position: pos,
-        map: mapInstanceRef.current!,
-        icon: { url: svgIcons.patient, scaledSize: new google.maps.Size(36, 42) },
-      });
+      if (!patientPinRef.current) {
+        patientPinRef.current = new google.maps.Marker({
+          position: pos,
+          map: mapInstanceRef.current!,
+          icon: { url: svgIcons.patient, scaledSize: new google.maps.Size(36, 42) },
+        });
+      } else {
+        patientPinRef.current.setPosition(pos);
+      }
       bounds.extend(pos);
       hasBounds = true;
+    } else {
+      if (patientPinRef.current) {
+        patientPinRef.current.setMap(null);
+        patientPinRef.current = null;
+      }
     }
 
     // 2. Ambulance pin
     if (data.assigned_ambulance && data.assigned_ambulance.latitude && data.assigned_ambulance.longitude) {
       const pos = { lat: parseFloat(data.assigned_ambulance.latitude), lng: parseFloat(data.assigned_ambulance.longitude) };
-      ambPinRef.current = new google.maps.Marker({
-        position: pos,
-        map: mapInstanceRef.current!,
-        icon: { url: svgIcons.ambulance, scaledSize: new google.maps.Size(36, 42) },
-      });
+      if (!ambPinRef.current) {
+        ambPinRef.current = new google.maps.Marker({
+          position: pos,
+          map: mapInstanceRef.current!,
+          icon: { url: svgIcons.ambulance, scaledSize: new google.maps.Size(36, 42) },
+        });
+      } else {
+        ambPinRef.current.setPosition(pos);
+      }
       bounds.extend(pos);
       hasBounds = true;
+    } else {
+      if (ambPinRef.current) {
+        ambPinRef.current.setMap(null);
+        ambPinRef.current = null;
+      }
     }
 
     // 3. Hospital destination pin
     if (data.destination_hospital && data.destination_hospital.latitude && data.destination_hospital.longitude) {
       const pos = { lat: parseFloat(data.destination_hospital.latitude), lng: parseFloat(data.destination_hospital.longitude) };
-      hospPinRef.current = new google.maps.Marker({
-        position: pos,
-        map: mapInstanceRef.current!,
-        icon: { url: svgIcons.hospital, scaledSize: new google.maps.Size(36, 42) },
-      });
+      if (!hospPinRef.current) {
+        hospPinRef.current = new google.maps.Marker({
+          position: pos,
+          map: mapInstanceRef.current!,
+          icon: { url: svgIcons.hospital, scaledSize: new google.maps.Size(36, 42) },
+        });
+      } else {
+        hospPinRef.current.setPosition(pos);
+      }
       bounds.extend(pos);
       hasBounds = true;
+    } else {
+      if (hospPinRef.current) {
+        hospPinRef.current.setMap(null);
+        hospPinRef.current = null;
+      }
     }
 
-    if (hasBounds) {
+    if (hasBounds && !initialBoundsFitRef.current) {
       mapInstanceRef.current.fitBounds(bounds);
+      initialBoundsFitRef.current = true;
     }
 
     // Draw route directions
@@ -186,25 +211,48 @@ const Tracker: React.FC = () => {
         });
       }
 
-      const directionsService = new google.maps.DirectionsService();
-      directionsService.route({
-        origin,
-        destination,
-        travelMode: google.maps.TravelMode.DRIVING,
-      }, (result, status) => {
-        if (status === 'OK' && result && directionsRendererRef.current) {
-          directionsRendererRef.current.setDirections(result);
-          const leg = result.routes[0]?.legs[0];
-          if (leg) {
-            setEtaText(`ETA: ${leg.duration?.text} (${leg.distance?.text})`);
+      // Check if coordinates moved significantly to avoid excessive API requests
+      const currentOriginLat = origin.lat();
+      const currentOriginLng = origin.lng();
+      const currentDestLat = destination.lat();
+      const currentDestLng = destination.lng();
+
+      const lastCoords = lastRouteCoordsRef.current;
+      const hasMovedSignificantly = !lastCoords ||
+        Math.abs(lastCoords.originLat - currentOriginLat) > 0.0001 ||
+        Math.abs(lastCoords.originLng - currentOriginLng) > 0.0001 ||
+        Math.abs(lastCoords.destLat - currentDestLat) > 0.0001 ||
+        Math.abs(lastCoords.destLng - currentDestLng) > 0.0001;
+
+      if (hasMovedSignificantly) {
+        lastRouteCoordsRef.current = {
+          originLat: currentOriginLat,
+          originLng: currentOriginLng,
+          destLat: currentDestLat,
+          destLng: currentDestLng
+        };
+
+        const directionsService = new google.maps.DirectionsService();
+        directionsService.route({
+          origin,
+          destination,
+          travelMode: google.maps.TravelMode.DRIVING,
+        }, (result, status) => {
+          if (status === 'OK' && result && directionsRendererRef.current) {
+            directionsRendererRef.current.setDirections(result);
+            const leg = result.routes[0]?.legs[0];
+            if (leg) {
+              setEtaText(`ETA: ${leg.duration?.text} (${leg.distance?.text})`);
+            }
           }
-        }
-      });
+        });
+      }
     } else {
       if (directionsRendererRef.current) {
         directionsRendererRef.current.setMap(null);
         directionsRendererRef.current = null;
       }
+      lastRouteCoordsRef.current = null;
     }
   };
 

@@ -56,6 +56,9 @@ const ActiveMission: React.FC = () => {
   const patientMarkerRef = useRef<google.maps.Marker | null>(null);
   const hospMarkerRef = useRef<google.maps.Marker | null>(null);
   const directionsRendererRef = useRef<google.maps.DirectionsRenderer | null>(null);
+  const lastRouteCoordsRef = useRef<{originLat: number, originLng: number, destLat: number, destLng: number} | null>(null);
+  const initialBoundsFitRef = useRef<boolean>(false);
+  const lastReqStatusRef = useRef<string>('');
 
   const [lat, setLat] = useState<number>(13.0232);
   const [lng, setLng] = useState<number>(80.0175);
@@ -87,6 +90,23 @@ const ActiveMission: React.FC = () => {
       return () => navigator.geolocation.clearWatch(watchId);
     }
   }, []);
+
+  // Upload driver location telemetry to backend
+  useEffect(() => {
+    if (lat && lng) {
+      const uploadLocation = async () => {
+        try {
+          await axios.post('/driver/location.php', {
+            latitude: lat,
+            longitude: lng
+          });
+        } catch (e) {
+          console.warn("Failed to upload driver location telemetry", e);
+        }
+      };
+      uploadLocation();
+    }
+  }, [lat, lng]);
 
   // Poll for active alerts checks
   const pollActiveAlerts = async () => {
@@ -218,23 +238,54 @@ const ActiveMission: React.FC = () => {
       }
     }
 
-    mapsInstanceRef.current.fitBounds(bounds);
+    // Reset initial bounds fit if request status changes
+    if (req?.status !== lastReqStatusRef.current) {
+      initialBoundsFitRef.current = false;
+      lastReqStatusRef.current = req?.status || '';
+    }
+
+    // Fit bounds only once per status change to prevent jittery maps
+    if (!initialBoundsFitRef.current) {
+      mapsInstanceRef.current.fitBounds(bounds);
+      initialBoundsFitRef.current = true;
+    }
 
     if (destination && directionsRendererRef.current) {
-      const directionsService = new google.maps.DirectionsService();
-      directionsService.route({
-        origin: new google.maps.LatLng(lat, lng),
-        destination,
-        travelMode: google.maps.TravelMode.DRIVING,
-      }, (result, status) => {
-        if (status === 'OK' && result && directionsRendererRef.current) {
-          directionsRendererRef.current.setDirections(result);
-          const leg = result.routes[0]?.legs[0];
-          if (leg) {
-            setEtaText(`${leg.duration?.text} (${leg.distance?.text})`);
+      const currentOriginLat = lat;
+      const currentOriginLng = lng;
+      const currentDestLat = destination.lat();
+      const currentDestLng = destination.lng();
+
+      const lastCoords = lastRouteCoordsRef.current;
+      const hasMovedSignificantly = !lastCoords ||
+        Math.abs(lastCoords.originLat - currentOriginLat) > 0.0001 ||
+        Math.abs(lastCoords.originLng - currentOriginLng) > 0.0001 ||
+        Math.abs(lastCoords.destLat - currentDestLat) > 0.0001 ||
+        Math.abs(lastCoords.destLng - currentDestLng) > 0.0001;
+
+      if (hasMovedSignificantly) {
+        lastRouteCoordsRef.current = {
+          originLat: currentOriginLat,
+          originLng: currentOriginLng,
+          destLat: currentDestLat,
+          destLng: currentDestLng
+        };
+
+        const directionsService = new google.maps.DirectionsService();
+        directionsService.route({
+          origin: new google.maps.LatLng(lat, lng),
+          destination,
+          travelMode: google.maps.TravelMode.DRIVING,
+        }, (result, status) => {
+          if (status === 'OK' && result && directionsRendererRef.current) {
+            directionsRendererRef.current.setDirections(result);
+            const leg = result.routes[0]?.legs[0];
+            if (leg) {
+              setEtaText(`${leg.duration?.text} (${leg.distance?.text})`);
+            }
           }
-        }
-      });
+        });
+      }
     }
   };
 
