@@ -59,6 +59,7 @@ const ActiveMission: React.FC = () => {
   const lastRouteCoordsRef = useRef<{originLat: number, originLng: number, destLat: number, destLng: number} | null>(null);
   const initialBoundsFitRef = useRef<boolean>(false);
   const lastReqStatusRef = useRef<string>('');
+  const surroundingHospMarkersRef = useRef<google.maps.Marker[]>([]);
 
   const [lat, setLat] = useState<number>(13.0232);
   const [lng, setLng] = useState<number>(80.0175);
@@ -118,7 +119,7 @@ const ActiveMission: React.FC = () => {
           const req = list[0];
           if (['accepted', 'arrived', 'boarded'].includes(req.status)) {
             setActiveMission(req);
-            if (req.status === 'boarded' && hospitalsList.length === 0) {
+            if (['arrived', 'boarded'].includes(req.status) && hospitalsList.length === 0) {
               fetchHospitalsDropdown();
             }
           } else {
@@ -155,28 +156,46 @@ const ActiveMission: React.FC = () => {
 
   // Maps setup
   useEffect(() => {
-    if (mapRef.current && typeof google !== 'undefined' && !mapsInstanceRef.current) {
-      mapsInstanceRef.current = new google.maps.Map(mapRef.current, {
-        center: { lat: 13.0232, lng: 80.0175 },
-        zoom: 14,
-        styles: googleMapsDarkStyle,
-        mapTypeControl: false,
-        streetViewControl: false,
-      });
+    let mapTimer: any;
 
-      directionsRendererRef.current = new google.maps.DirectionsRenderer({
-        map: mapsInstanceRef.current,
-        suppressMarkers: true,
-        polylineOptions: { strokeColor: "#3b82f6", strokeOpacity: 0.8, strokeWeight: 6 },
-      });
-    }
-  }, []);
+    const initMap = () => {
+      if (mapRef.current && typeof google !== 'undefined' && !mapsInstanceRef.current) {
+        mapsInstanceRef.current = new google.maps.Map(mapRef.current, {
+          center: { lat: 13.0232, lng: 80.0175 },
+          zoom: 14,
+          styles: googleMapsDarkStyle,
+          mapTypeControl: false,
+          streetViewControl: false,
+        });
+
+        directionsRendererRef.current = new google.maps.DirectionsRenderer({
+          map: mapsInstanceRef.current,
+          suppressMarkers: true,
+          polylineOptions: { strokeColor: "#3b82f6", strokeOpacity: 0.8, strokeWeight: 6 },
+        });
+
+        if (activeMission) {
+          updateDriverMapPins(activeMission);
+        }
+      } else if (typeof google === 'undefined') {
+        mapTimer = setTimeout(initMap, 500);
+      }
+    };
+
+    initMap();
+
+    return () => {
+      if (mapTimer) clearTimeout(mapTimer);
+    };
+  }, [activeMission]);
 
   const clearMapPins = () => {
     if (selfMarkerRef.current) selfMarkerRef.current.setMap(null);
     if (patientMarkerRef.current) patientMarkerRef.current.setMap(null);
     if (hospMarkerRef.current) hospMarkerRef.current.setMap(null);
     if (directionsRendererRef.current) directionsRendererRef.current.setDirections({ routes: [] } as any);
+    surroundingHospMarkersRef.current.forEach(m => m.setMap(null));
+    surroundingHospMarkersRef.current = [];
   };
 
   const updateDriverMapPins = (req: any) => {
@@ -236,6 +255,28 @@ const ActiveMission: React.FC = () => {
         hospMarkerRef.current.setMap(null);
         hospMarkerRef.current = null;
       }
+    }
+
+    // Clear old surrounding hospital markers
+    surroundingHospMarkersRef.current.forEach(m => m.setMap(null));
+    surroundingHospMarkersRef.current = [];
+
+    // Plot surrounding hospitals if status is arrived or boarded
+    if (['arrived', 'boarded'].includes(req?.status)) {
+      hospitalsList.forEach((hosp: any) => {
+        if (req?.status === 'boarded' && hosp.hospital_id === req.destination_hospital_id) return;
+
+        const hLat = parseFloat(hosp.latitude);
+        const hLng = parseFloat(hosp.longitude);
+        const marker = new google.maps.Marker({
+          position: { lat: hLat, lng: hLng },
+          map: mapsInstanceRef.current!,
+          icon: { url: svgIcons.hospital, scaledSize: new google.maps.Size(30, 36) },
+          title: `${hosp.name} (ICU: ${hosp.available_icu_beds}, General: ${hosp.available_general_beds})`
+        });
+        surroundingHospMarkersRef.current.push(marker);
+        bounds.extend({ lat: hLat, lng: hLng });
+      });
     }
 
     // Reset initial bounds fit if request status changes
@@ -529,6 +570,49 @@ const ActiveMission: React.FC = () => {
             <button onClick={handlePushVitals} className="w-full py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition text-sm flex items-center justify-center gap-2">
               <Activity className="w-4 h-4 text-emerald-400" /> Push Vitals to Hospital
             </button>
+          </div>
+        )}
+
+        {['arrived', 'boarded'].includes(activeMission.status) && (
+          <div className="bg-slate-900 border border-white/10 rounded-3xl p-6 shadow-2xl space-y-4">
+            <h3 className="text-sm font-extrabold text-white uppercase tracking-wider text-slate-400">Nearby Emergency Facilities</h3>
+            <div className="space-y-3 max-h-60 overflow-y-auto custom-scrollbar pr-1">
+              {hospitalsList.length > 0 ? (
+                hospitalsList.map((hosp: any) => (
+                  <div key={hosp.hospital_id} className="bg-slate-950 rounded-xl p-4 border border-white/5 flex flex-col gap-2">
+                    <div className="flex justify-between items-start">
+                      <div className="font-bold text-white text-sm">{hosp.name}</div>
+                      <span className="text-[10px] bg-blue-500/10 border border-blue-500/20 text-blue-400 px-2 py-0.5 rounded font-bold">
+                        {hosp.phone_number || 'N/A'}
+                      </span>
+                    </div>
+                    <div className="text-xs text-slate-400">{hosp.address}</div>
+                    <div className="grid grid-cols-3 gap-2 mt-2 pt-2 border-t border-white/5">
+                      <div className="text-center">
+                        <div className="text-[9px] text-slate-500 font-bold uppercase">ICU Beds</div>
+                        <div className={`text-xs font-extrabold mt-0.5 ${hosp.available_icu_beds > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                          {hosp.available_icu_beds}
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-[9px] text-slate-500 font-bold uppercase">General</div>
+                        <div className={`text-xs font-extrabold mt-0.5 ${hosp.available_general_beds > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                          {hosp.available_general_beds}
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-[9px] text-slate-500 font-bold uppercase">NICU Beds</div>
+                        <div className={`text-xs font-extrabold mt-0.5 ${hosp.available_nicu_beds > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                          {hosp.available_nicu_beds}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="text-center text-xs text-slate-500 py-4">No nearby hospitals loaded.</div>
+              )}
+            </div>
           </div>
         )}
       </div>
