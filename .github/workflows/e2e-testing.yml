@@ -1,10 +1,11 @@
-name: Scale E2E suites to 1800 test cases
+name: SafeReach E2E Test Suite CI
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   selenium-web-tests:
@@ -24,7 +25,7 @@ jobs:
           echo "Running 300 Selenium Website E2E Test Cases..."
           node selenium-tests/tests/login-tests.js || true
 
-      - name: Upload Selenium Report
+      - name: Upload Selenium Web Report
         uses: actions/upload-artifact@v4
         with:
           name: selenium-web-report
@@ -47,7 +48,7 @@ jobs:
           echo "Running 300 Appium Android E2E Test Cases..."
           node appium-tests/tests/appium-login-tests.js || true
 
-      - name: Upload Appium Report
+      - name: Upload Appium Android Report
         uses: actions/upload-artifact@v4
         with:
           name: appium-android-report
@@ -87,43 +88,9 @@ jobs:
           name: validation-test-report
           path: testing-reports/validation-test-report.csv
 
-  deployment-status:
-    name: Deployment Status (300)
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Run Deployment Status Checks
-        run: |
-          echo "Running 300 Deployment Integrity Checks..."
-
-      - name: Upload Deployment Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: deployment-test-report
-          path: testing-reports/deployment-test-report.csv
-
-  load-testing:
-    name: Load Testing — Performance (300)
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Run Telemetry Performance Load Tests
-        run: |
-          echo "Running 300 Performance Load Test Cases..."
-
-      - name: Upload Load Testing Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: load-test-report
-          path: testing-reports/load-test-report.csv
-
   compile-master:
-    name: Compile Master Report & Deploy
-    needs: [selenium-web-tests, appium-android-tests, unit-tests-api, validation-tests, deployment-status, load-testing]
+    name: Compile Master E2E Report
+    needs: [selenium-web-tests, appium-android-tests, unit-tests-api, validation-tests]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -136,7 +103,7 @@ jobs:
 
       - name: Build Consolidated Summary Report
         run: |
-          echo "Consolidating 1800 test cases reports into Master E2E Report..."
+          echo "Consolidating 1200 test cases reports into Master E2E Report..."
 
       - name: Upload Consolidated E2E Report
         uses: actions/upload-artifact@v4
