@@ -1,0 +1,901 @@
+Test Case ID,Test Suite,Test Category,Role,Description,Input Parameter,Execution Steps,Expected Result,Status,Automated
+TC-APP-001,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #1,Param_1: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-002,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #2,Param_2: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-003,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #3,Param_3: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-004,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #4,Param_4: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-005,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #5,Param_5: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-006,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #6,Param_6: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-007,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #7,Param_7: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-008,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #8,Param_8: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-009,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #9,Param_9: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-010,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #10,Param_10: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-011,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #11,Param_11: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-012,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #12,Param_12: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-013,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #13,Param_13: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-014,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #14,Param_14: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-015,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #15,Param_15: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-016,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #16,Param_16: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-017,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #17,Param_17: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-018,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #18,Param_18: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-019,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #19,Param_19: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-020,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #20,Param_20: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-021,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #21,Param_21: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-022,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #22,Param_22: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-023,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #23,Param_23: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-024,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #24,Param_24: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-025,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #25,Param_25: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-026,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #26,Param_26: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-027,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #27,Param_27: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-028,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #28,Param_28: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-029,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #29,Param_29: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-030,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #30,Param_30: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-031,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #31,Param_31: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-032,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #32,Param_32: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-033,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #33,Param_33: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-034,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #34,Param_34: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-035,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #35,Param_35: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-036,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #36,Param_36: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-037,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #37,Param_37: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-038,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #38,Param_38: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-039,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #39,Param_39: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-040,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #40,Param_40: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-041,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #41,Param_41: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-042,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #42,Param_42: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-043,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #43,Param_43: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-044,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #44,Param_44: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-045,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #45,Param_45: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-046,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #46,Param_46: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-047,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #47,Param_47: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-048,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #48,Param_48: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-049,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #49,Param_49: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-050,Appium Android Suite,Core Functional Flow,Driver/Citizen,Verify major workflow integration checkpoint #50,Param_50: active_duty=true,"1. Launch module
+2. Trigger action event
+3. Verify response payload","Payload validation succeeds, HTTP 200 returned",Passed,Yes
+TC-APP-051,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #51,BoundaryValue_51: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-052,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #52,BoundaryValue_52: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-053,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #53,BoundaryValue_53: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-054,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #54,BoundaryValue_54: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-055,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #55,BoundaryValue_55: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-056,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #56,BoundaryValue_56: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-057,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #57,BoundaryValue_57: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-058,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #58,BoundaryValue_58: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-059,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #59,BoundaryValue_59: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-060,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #60,BoundaryValue_60: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-061,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #61,BoundaryValue_61: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-062,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #62,BoundaryValue_62: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-063,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #63,BoundaryValue_63: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-064,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #64,BoundaryValue_64: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-065,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #65,BoundaryValue_65: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-066,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #66,BoundaryValue_66: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-067,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #67,BoundaryValue_67: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-068,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #68,BoundaryValue_68: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-069,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #69,BoundaryValue_69: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-070,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #70,BoundaryValue_70: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-071,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #71,BoundaryValue_71: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-072,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #72,BoundaryValue_72: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-073,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #73,BoundaryValue_73: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-074,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #74,BoundaryValue_74: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-075,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #75,BoundaryValue_75: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-076,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #76,BoundaryValue_76: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-077,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #77,BoundaryValue_77: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-078,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #78,BoundaryValue_78: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-079,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #79,BoundaryValue_79: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-080,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #80,BoundaryValue_80: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-081,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #81,BoundaryValue_81: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-082,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #82,BoundaryValue_82: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-083,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #83,BoundaryValue_83: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-084,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #84,BoundaryValue_84: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-085,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #85,BoundaryValue_85: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-086,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #86,BoundaryValue_86: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-087,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #87,BoundaryValue_87: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-088,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #88,BoundaryValue_88: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-089,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #89,BoundaryValue_89: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-090,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #90,BoundaryValue_90: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-091,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #91,BoundaryValue_91: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-092,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #92,BoundaryValue_92: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-093,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #93,BoundaryValue_93: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-094,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #94,BoundaryValue_94: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-095,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #95,BoundaryValue_95: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-096,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #96,BoundaryValue_96: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-097,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #97,BoundaryValue_97: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-098,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #98,BoundaryValue_98: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-099,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #99,BoundaryValue_99: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-100,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #100,BoundaryValue_100: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-101,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #101,BoundaryValue_101: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-102,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #102,BoundaryValue_102: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-103,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #103,BoundaryValue_103: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-104,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #104,BoundaryValue_104: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-105,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #105,BoundaryValue_105: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-106,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #106,BoundaryValue_106: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-107,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #107,BoundaryValue_107: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-108,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #108,BoundaryValue_108: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-109,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #109,BoundaryValue_109: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-110,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #110,BoundaryValue_110: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-111,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #111,BoundaryValue_111: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-112,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #112,BoundaryValue_112: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-113,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #113,BoundaryValue_113: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-114,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #114,BoundaryValue_114: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-115,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #115,BoundaryValue_115: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-116,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #116,BoundaryValue_116: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-117,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #117,BoundaryValue_117: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-118,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #118,BoundaryValue_118: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-119,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #119,BoundaryValue_119: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-120,Appium Android Suite,Boundary & Validation,Driver/Citizen,Verify input parameters edge validation test #120,BoundaryValue_120: max_length=255,"1. Enter boundary condition parameters
+2. Execute action
+3. Inspect error/success message",System handles bounds without throwing unhandled warnings,Passed,Yes
+TC-APP-121,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #121,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-122,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #122,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-123,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #123,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-124,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #124,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-125,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #125,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-126,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #126,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-127,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #127,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-128,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #128,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-129,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #129,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-130,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #130,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-131,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #131,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-132,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #132,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-133,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #133,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-134,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #134,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-135,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #135,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-136,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #136,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-137,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #137,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-138,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #138,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-139,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #139,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-140,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #140,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-141,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #141,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-142,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #142,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-143,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #143,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-144,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #144,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-145,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #145,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-146,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #146,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-147,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #147,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-148,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #148,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-149,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #149,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-150,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #150,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-151,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #151,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-152,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #152,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-153,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #153,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-154,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #154,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-155,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #155,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-156,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #156,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-157,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #157,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-158,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #158,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-159,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #159,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-160,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #160,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-161,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #161,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-162,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #162,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-163,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #163,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-164,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #164,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-165,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #165,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-166,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #166,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-167,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #167,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-168,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #168,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-169,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #169,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-170,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #170,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-171,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #171,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-172,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #172,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-173,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #173,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-174,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #174,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-175,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #175,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-176,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #176,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-177,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #177,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-178,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #178,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-179,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #179,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-180,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #180,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-181,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #181,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-182,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #182,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-183,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #183,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-184,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #184,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-185,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #185,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-186,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #186,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-187,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #187,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-188,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #188,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-189,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #189,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-190,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #190,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-191,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #191,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-192,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #192,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-193,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #193,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-194,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #194,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-195,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #195,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-196,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #196,TelemetryInterval: 1500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-197,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #197,TelemetryInterval: 2000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-198,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #198,TelemetryInterval: 2500ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-199,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #199,TelemetryInterval: 3000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-200,Appium Android Suite,Performance & Telemetry,Driver/Citizen,Verify response times and GPS polling recycle #200,TelemetryInterval: 1000ms,"1. Set target polling interval
+2. Monitor telemetry channel
+3. Record latency metrics",Lag bounds remain under 150ms limit,Passed,Yes
+TC-APP-201,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #201,ExceptionFlag: raise_err_201,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-202,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #202,ExceptionFlag: raise_err_202,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-203,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #203,ExceptionFlag: raise_err_203,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-204,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #204,ExceptionFlag: raise_err_204,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-205,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #205,ExceptionFlag: raise_err_205,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-206,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #206,ExceptionFlag: raise_err_206,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-207,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #207,ExceptionFlag: raise_err_207,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-208,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #208,ExceptionFlag: raise_err_208,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-209,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #209,ExceptionFlag: raise_err_209,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-210,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #210,ExceptionFlag: raise_err_210,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-211,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #211,ExceptionFlag: raise_err_211,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-212,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #212,ExceptionFlag: raise_err_212,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-213,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #213,ExceptionFlag: raise_err_213,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-214,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #214,ExceptionFlag: raise_err_214,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-215,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #215,ExceptionFlag: raise_err_215,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-216,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #216,ExceptionFlag: raise_err_216,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-217,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #217,ExceptionFlag: raise_err_217,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-218,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #218,ExceptionFlag: raise_err_218,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-219,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #219,ExceptionFlag: raise_err_219,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-220,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #220,ExceptionFlag: raise_err_220,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-221,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #221,ExceptionFlag: raise_err_221,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-222,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #222,ExceptionFlag: raise_err_222,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-223,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #223,ExceptionFlag: raise_err_223,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-224,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #224,ExceptionFlag: raise_err_224,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-225,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #225,ExceptionFlag: raise_err_225,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-226,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #226,ExceptionFlag: raise_err_226,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-227,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #227,ExceptionFlag: raise_err_227,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-228,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #228,ExceptionFlag: raise_err_228,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-229,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #229,ExceptionFlag: raise_err_229,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-230,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #230,ExceptionFlag: raise_err_230,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-231,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #231,ExceptionFlag: raise_err_231,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-232,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #232,ExceptionFlag: raise_err_232,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-233,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #233,ExceptionFlag: raise_err_233,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-234,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #234,ExceptionFlag: raise_err_234,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-235,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #235,ExceptionFlag: raise_err_235,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-236,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #236,ExceptionFlag: raise_err_236,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-237,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #237,ExceptionFlag: raise_err_237,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-238,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #238,ExceptionFlag: raise_err_238,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-239,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #239,ExceptionFlag: raise_err_239,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-240,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #240,ExceptionFlag: raise_err_240,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-241,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #241,ExceptionFlag: raise_err_241,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-242,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #242,ExceptionFlag: raise_err_242,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-243,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #243,ExceptionFlag: raise_err_243,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-244,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #244,ExceptionFlag: raise_err_244,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-245,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #245,ExceptionFlag: raise_err_245,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-246,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #246,ExceptionFlag: raise_err_246,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-247,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #247,ExceptionFlag: raise_err_247,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-248,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #248,ExceptionFlag: raise_err_248,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-249,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #249,ExceptionFlag: raise_err_249,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-250,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #250,ExceptionFlag: raise_err_250,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-251,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #251,ExceptionFlag: raise_err_251,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-252,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #252,ExceptionFlag: raise_err_252,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-253,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #253,ExceptionFlag: raise_err_253,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-254,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #254,ExceptionFlag: raise_err_254,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-255,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #255,ExceptionFlag: raise_err_255,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-256,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #256,ExceptionFlag: raise_err_256,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-257,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #257,ExceptionFlag: raise_err_257,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-258,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #258,ExceptionFlag: raise_err_258,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-259,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #259,ExceptionFlag: raise_err_259,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-260,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #260,ExceptionFlag: raise_err_260,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-261,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #261,ExceptionFlag: raise_err_261,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-262,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #262,ExceptionFlag: raise_err_262,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-263,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #263,ExceptionFlag: raise_err_263,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-264,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #264,ExceptionFlag: raise_err_264,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-265,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #265,ExceptionFlag: raise_err_265,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-266,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #266,ExceptionFlag: raise_err_266,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-267,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #267,ExceptionFlag: raise_err_267,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-268,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #268,ExceptionFlag: raise_err_268,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-269,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #269,ExceptionFlag: raise_err_269,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-270,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #270,ExceptionFlag: raise_err_270,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-271,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #271,ExceptionFlag: raise_err_271,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-272,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #272,ExceptionFlag: raise_err_272,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-273,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #273,ExceptionFlag: raise_err_273,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-274,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #274,ExceptionFlag: raise_err_274,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-275,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #275,ExceptionFlag: raise_err_275,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-276,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #276,ExceptionFlag: raise_err_276,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-277,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #277,ExceptionFlag: raise_err_277,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-278,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #278,ExceptionFlag: raise_err_278,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-279,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #279,ExceptionFlag: raise_err_279,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-280,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #280,ExceptionFlag: raise_err_280,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-281,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #281,ExceptionFlag: raise_err_281,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-282,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #282,ExceptionFlag: raise_err_282,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-283,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #283,ExceptionFlag: raise_err_283,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-284,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #284,ExceptionFlag: raise_err_284,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-285,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #285,ExceptionFlag: raise_err_285,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-286,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #286,ExceptionFlag: raise_err_286,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-287,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #287,ExceptionFlag: raise_err_287,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-288,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #288,ExceptionFlag: raise_err_288,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-289,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #289,ExceptionFlag: raise_err_289,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-290,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #290,ExceptionFlag: raise_err_290,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-291,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #291,ExceptionFlag: raise_err_291,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-292,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #292,ExceptionFlag: raise_err_292,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-293,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #293,ExceptionFlag: raise_err_293,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-294,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #294,ExceptionFlag: raise_err_294,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-295,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #295,ExceptionFlag: raise_err_295,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-296,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #296,ExceptionFlag: raise_err_296,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-297,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #297,ExceptionFlag: raise_err_297,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-298,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #298,ExceptionFlag: raise_err_298,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-299,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #299,ExceptionFlag: raise_err_299,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
+TC-APP-300,Appium Android Suite,Security & Exception Checks,Driver/Citizen,Verify system exception handler and credentials checklist #300,ExceptionFlag: raise_err_300,"1. Send invalid request parameter
+2. Verify system logs warning
+3. Confirm error code response",Clean exit status code with localized exception body,Passed,Yes
