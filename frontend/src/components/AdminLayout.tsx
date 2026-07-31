@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { 
-  LayoutDashboard, Map, Bell, AlertTriangle, Users, Truck, Building2, 
+  LayoutDashboard, Bell, AlertTriangle, Users, Truck, Building2, 
   Activity, FileText, Settings, LogOut, Search, ShieldAlert, UserCheck
 } from 'lucide-react';
 
@@ -18,7 +18,6 @@ const AdminLayout: React.FC = () => {
 
   const navItems = [
     { name: 'Dashboard', path: '/admin/dashboard', icon: LayoutDashboard },
-    { name: 'New Bookings', path: '/admin/bookings', icon: Map },
     { name: 'Live Monitor', path: '/admin/monitor', icon: Activity },
     { name: 'SOS Requests', path: '/admin/sos', icon: AlertTriangle, alert: true },
     { name: 'Driver Mgmt', path: '/admin/drivers', icon: UserCheck },

@@ -28,7 +28,6 @@ import DriverNotifications from './pages/driver/DriverNotifications';
 import DriverHelp from './pages/driver/DriverHelp';
 import AdminLayout from './components/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
-import AdminBookings from './pages/admin/AdminBookings';
 import AdminMonitor from './pages/admin/AdminMonitor';
 import AdminSOS from './pages/admin/AdminSOS';
 import AdminDrivers from './pages/admin/AdminDrivers';
@@ -221,7 +220,6 @@ const AppContent: React.FC = () => {
         >
           <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="bookings" element={<AdminBookings />} />
           <Route path="monitor" element={<AdminMonitor />} />
           <Route path="sos" element={<AdminSOS />} />
           <Route path="drivers" element={<AdminDrivers />} />
