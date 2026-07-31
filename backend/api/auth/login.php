@@ -28,9 +28,15 @@ $db = $database->getConnection();
 try {
     // Select by email/phone+role when role is specified (same email can exist per role)
     if (!empty($role) && in_array($role, ['user', 'driver', 'admin'])) {
-        $query = "SELECT user_id, full_name, email, password_hash, role, hospital_id FROM users WHERE (email = ? OR phone_number = ?) AND role = ? LIMIT 1";
-        $stmt = $db->prepare($query);
-        $stmt->execute([$identifier, $identifier, $role]);
+        if ($role === 'admin') {
+            $query = "SELECT user_id, full_name, email, password_hash, role, hospital_id FROM users WHERE (email = ? OR phone_number = ?) AND role IN ('admin', 'super_admin', 'dispatcher') LIMIT 1";
+            $stmt = $db->prepare($query);
+            $stmt->execute([$identifier, $identifier]);
+        } else {
+            $query = "SELECT user_id, full_name, email, password_hash, role, hospital_id FROM users WHERE (email = ? OR phone_number = ?) AND role = ? LIMIT 1";
+            $stmt = $db->prepare($query);
+            $stmt->execute([$identifier, $identifier, $role]);
+        }
     } else {
         $query = "SELECT user_id, full_name, email, password_hash, role, hospital_id FROM users WHERE email = ? OR phone_number = ? ORDER BY user_id ASC LIMIT 1";
         $stmt = $db->prepare($query);
