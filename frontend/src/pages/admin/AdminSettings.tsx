@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import { Save, Cpu, Database } from 'lucide-react';
+import { Save, Cpu, Database, Key } from 'lucide-react';
+import axios from '../../api/axios';
 
 const AdminSettings: React.FC = () => {
-  const { showToast } = useAuth();
+  const { showToast, setGlobalLoading } = useAuth();
   const [systemName, setSystemName] = useState('SafeReach Operations Control');
+  const [oldPassword, setOldPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [smsGateway, setSmsGateway] = useState('Twilio SMS Gateway');
   const [autoDispatch, setAutoDispatch] = useState(true);
   const [maintenanceMode, setMaintenanceMode] = useState(false);
@@ -13,6 +17,31 @@ const AdminSettings: React.FC = () => {
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
     showToast('Settings Saved', 'System configurations updated successfully.', 'success');
+  };
+
+  const handleChangePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newPassword !== confirmPassword) {
+      showToast("Password Error", "New passwords do not match.", "warning");
+      return;
+    }
+    setGlobalLoading(true);
+    try {
+      const res = await axios.post('/auth/change_password.php', {
+        old_password: oldPassword,
+        new_password: newPassword
+      });
+      if (res.data?.success) {
+        showToast("Success", "Password changed successfully.", "success");
+        setOldPassword('');
+        setNewPassword('');
+        setConfirmPassword('');
+      }
+    } catch (err: any) {
+      showToast("Change Failed", err.response?.data?.message || err.message, "error");
+    } finally {
+      setGlobalLoading(false);
+    }
   };
 
   return (
@@ -104,6 +133,58 @@ const AdminSettings: React.FC = () => {
           </button>
         </div>
       </form>
+
+      {/* Change Password Card */}
+      <div className="bg-slate-900 border border-white/5 rounded-3xl p-6 shadow-xl space-y-6 mt-6">
+        <h3 className="text-base font-extrabold text-white flex items-center gap-2 pb-3 border-b border-white/5">
+          <Key className="w-5 h-5 text-red-500" /> Change Administrator Password
+        </h3>
+        
+        <form onSubmit={handleChangePassword} className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+          <div className="space-y-1.5">
+            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Current Password</label>
+            <input 
+              type="password" 
+              value={oldPassword}
+              onChange={(e) => setOldPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+              className="w-full bg-slate-950 border border-white/5 rounded-xl py-2.5 px-4 text-sm text-white focus:outline-none focus:border-blue-500 transition"
+            />
+          </div>
+          <div className="space-y-1.5">
+            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">New Password</label>
+            <input 
+              type="password" 
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+              className="w-full bg-slate-950 border border-white/5 rounded-xl py-2.5 px-4 text-sm text-white focus:outline-none focus:border-blue-500 transition"
+            />
+          </div>
+          <div className="space-y-1.5">
+            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Confirm New Password</label>
+            <input 
+              type="password" 
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+              className="w-full bg-slate-950 border border-white/5 rounded-xl py-2.5 px-4 text-sm text-white focus:outline-none focus:border-blue-500 transition"
+            />
+          </div>
+          
+          <div className="md:col-span-3 flex justify-end">
+            <button 
+              type="submit"
+              className="flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition shadow-lg shadow-red-500/20"
+            >
+              <Key className="w-4 h-4" /> Change Password
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

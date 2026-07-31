@@ -21,6 +21,11 @@ const Profile: React.FC = () => {
   const [allergies, setAllergies] = useState('');
   const [chronicConditions, setChronicConditions] = useState('');
 
+  // Change Password forms
+  const [oldPassword, setOldPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
   const getLucideIcon = (name: string, props: any = {}) => {
     const IconComponent = iconMap[name] || iconMap.HelpCircle;
     return <IconComponent {...props} />;
@@ -90,6 +95,31 @@ const Profile: React.FC = () => {
       }
     } catch (err: any) {
       showToast("Update Failed", err.response?.data?.message || err.message, "error");
+    } finally {
+      setGlobalLoading(false);
+    }
+  };
+
+  const handleChangePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newPassword !== confirmPassword) {
+      showToast("Password Error", "New passwords do not match.", "warning");
+      return;
+    }
+    setGlobalLoading(true);
+    try {
+      const res = await axios.post('/auth/change_password.php', {
+        old_password: oldPassword,
+        new_password: newPassword
+      });
+      if (res.data?.success) {
+        showToast("Success", "Password changed successfully.", "success");
+        setOldPassword('');
+        setNewPassword('');
+        setConfirmPassword('');
+      }
+    } catch (err: any) {
+      showToast("Change Failed", err.response?.data?.message || err.message, "error");
     } finally {
       setGlobalLoading(false);
     }
@@ -230,6 +260,61 @@ const Profile: React.FC = () => {
           >
             Update Emergency File
           </button>
+        </form>
+      </div>
+
+      {/* Change Password Card */}
+      <div className="glass-panel rounded-2xl p-6 border border-white/5 shadow-xl space-y-4 lg:col-span-2">
+        <div>
+          <h2 className="text-lg font-heading font-extrabold text-white">Change Password</h2>
+          <p className="text-gray-400 text-xs mt-0.5">Update your account security credentials</p>
+        </div>
+
+        <form onSubmit={handleChangePassword} className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+          <div className="space-y-1">
+            <label className="text-[11px] font-semibold text-gray-300">Current Password</label>
+            <input
+              type="password"
+              value={oldPassword}
+              onChange={(e) => setOldPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+              className="w-full bg-slate-900/50 border border-white/10 rounded-xl py-2.5 px-3 text-xs focus:outline-none focus:border-accentRed text-white transition"
+            />
+          </div>
+
+          <div className="space-y-1">
+            <label className="text-[11px] font-semibold text-gray-300">New Password</label>
+            <input
+              type="password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+              className="w-full bg-slate-900/50 border border-white/10 rounded-xl py-2.5 px-3 text-xs focus:outline-none focus:border-accentRed text-white transition"
+            />
+          </div>
+
+          <div className="space-y-1">
+            <label className="text-[11px] font-semibold text-gray-300">Confirm New Password</label>
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+              className="w-full bg-slate-900/50 border border-white/10 rounded-xl py-2.5 px-3 text-xs focus:outline-none focus:border-accentRed text-white transition"
+            />
+          </div>
+
+          <div className="md:col-span-3 flex justify-end">
+            <button
+              type="submit"
+              className="bg-accentRed hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded-xl text-xs transition shadow-md"
+            >
+              Change Password
+            </button>
+          </div>
         </form>
       </div>
     </div>

@@ -4,8 +4,13 @@ import { useAuth } from '../../context/AuthContext';
 import { Phone, Mail, Award, Calendar, Shield, Truck, Activity, Navigation, CheckCircle } from 'lucide-react';
 
 const DriverProfile: React.FC = () => {
-  const { setGlobalLoading } = useAuth();
+  const { setGlobalLoading, showToast } = useAuth();
   const [profile, setProfile] = useState<any>(null);
+
+  // Change Password forms
+  const [oldPassword, setOldPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   useEffect(() => {
     fetchProfile();
@@ -20,6 +25,31 @@ const DriverProfile: React.FC = () => {
       }
     } catch (e) {
       console.warn("Failed to load profile", e);
+    } finally {
+      setGlobalLoading(false);
+    }
+  };
+
+  const handleChangePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newPassword !== confirmPassword) {
+      showToast("Password Error", "New passwords do not match.", "warning");
+      return;
+    }
+    setGlobalLoading(true);
+    try {
+      const res = await axios.post('/auth/change_password.php', {
+        old_password: oldPassword,
+        new_password: newPassword
+      });
+      if (res.data?.success) {
+        showToast("Success", "Password changed successfully.", "success");
+        setOldPassword('');
+        setNewPassword('');
+        setConfirmPassword('');
+      }
+    } catch (err: any) {
+      showToast("Change Failed", err.response?.data?.message || err.message, "error");
     } finally {
       setGlobalLoading(false);
     }
@@ -183,6 +213,62 @@ const DriverProfile: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Change Password Card */}
+      <div className="glass-panel rounded-3xl p-8 border border-white/5 shadow-2xl relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-[100px] pointer-events-none -mr-32 -mt-32"></div>
+        <div>
+          <h2 className="text-xl font-heading font-extrabold text-white mb-2">Change Password</h2>
+          <p className="text-slate-400 text-xs mb-6">Update your account security credentials</p>
+        </div>
+
+        <form onSubmit={handleChangePassword} className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+          <div className="space-y-1">
+            <label className="text-[11px] font-semibold text-gray-300">Current Password</label>
+            <input
+              type="password"
+              value={oldPassword}
+              onChange={(e) => setOldPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+              className="w-full bg-slate-950 border border-white/5 rounded-xl py-2.5 px-4 text-xs focus:outline-none focus:border-emerald-500 text-white transition"
+            />
+          </div>
+
+          <div className="space-y-1">
+            <label className="text-[11px] font-semibold text-gray-300">New Password</label>
+            <input
+              type="password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+              className="w-full bg-slate-950 border border-white/5 rounded-xl py-2.5 px-4 text-xs focus:outline-none focus:border-emerald-500 text-white transition"
+            />
+          </div>
+
+          <div className="space-y-1">
+            <label className="text-[11px] font-semibold text-gray-300">Confirm New Password</label>
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+              className="w-full bg-slate-950 border border-white/5 rounded-xl py-2.5 px-4 text-xs focus:outline-none focus:border-emerald-500 text-white transition"
+            />
+          </div>
+
+          <div className="md:col-span-3 flex justify-end">
+            <button
+              type="submit"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md"
+            >
+              Change Password
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
