@@ -1,0 +1,1001 @@
+Test Case ID,Test Suite,Test Category,Role,Description,Input Data,Execution Steps,Expected Result,Status,Automated (Selenium/Appium)
+TC-CIT-001,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #1,"Email: citizen_1@safereach.com, Pass: password_1","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-002,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #2,"Email: citizen_2@safereach.com, Pass: password_2","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-003,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #3,"Email: citizen_3@safereach.com, Pass: password_3","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-004,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #4,"Email: citizen_4@safereach.com, Pass: password_4","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-005,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #5,"Email: citizen_5@safereach.com, Pass: password_5","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-006,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #6,"Email: citizen_6@safereach.com, Pass: password_6","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-007,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #7,"Email: citizen_7@safereach.com, Pass: password_7","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-008,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #8,"Email: citizen_8@safereach.com, Pass: password_8","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-009,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #9,"Email: citizen_9@safereach.com, Pass: password_9","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-010,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #10,"Email: citizen_10@safereach.com, Pass: password_10","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-011,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #11,"Email: citizen_11@safereach.com, Pass: password_11","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-012,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #12,"Email: citizen_12@safereach.com, Pass: password_12","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-013,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #13,"Email: citizen_13@safereach.com, Pass: password_13","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-014,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #14,"Email: citizen_14@safereach.com, Pass: password_14","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-015,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #15,"Email: citizen_15@safereach.com, Pass: password_15","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-016,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #16,"Email: citizen_16@safereach.com, Pass: password_16","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-017,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #17,"Email: citizen_17@safereach.com, Pass: password_17","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-018,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #18,"Email: citizen_18@safereach.com, Pass: password_18","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-019,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #19,"Email: citizen_19@safereach.com, Pass: password_19","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-020,Citizen Mobile & Web Portal,Authentication & Onboarding,Citizen,Verify login response with variation configuration check #20,"Email: citizen_20@safereach.com, Pass: password_20","1. Navigate to login page
+2. Select Citizen tab
+3. Input credential fields
+4. Click submit",Successful dashboard redirection and JWT storage,Passed,Yes
+TC-CIT-021,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #21,"Coords: (12.21, 77.21), Address: St_21 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-022,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #22,"Coords: (12.22, 77.22), Address: St_22 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-023,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #23,"Coords: (12.23, 77.23), Address: St_23 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-024,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #24,"Coords: (12.24, 77.24), Address: St_24 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-025,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #25,"Coords: (12.25, 77.25), Address: St_25 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-026,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #26,"Coords: (12.26, 77.26), Address: St_26 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-027,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #27,"Coords: (12.27, 77.27), Address: St_27 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-028,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #28,"Coords: (12.28, 77.28), Address: St_28 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-029,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #29,"Coords: (12.29, 77.29), Address: St_29 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-030,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #30,"Coords: (12.30, 77.30), Address: St_30 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-031,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #31,"Coords: (12.31, 77.31), Address: St_31 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-032,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #32,"Coords: (12.32, 77.32), Address: St_32 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-033,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #33,"Coords: (12.33, 77.33), Address: St_33 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-034,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #34,"Coords: (12.34, 77.34), Address: St_34 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-035,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #35,"Coords: (12.35, 77.35), Address: St_35 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-036,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #36,"Coords: (12.36, 77.36), Address: St_36 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-037,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #37,"Coords: (12.37, 77.37), Address: St_37 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-038,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #38,"Coords: (12.38, 77.38), Address: St_38 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-039,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #39,"Coords: (12.39, 77.39), Address: St_39 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-040,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #40,"Coords: (12.40, 77.40), Address: St_40 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-041,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #41,"Coords: (12.41, 77.41), Address: St_41 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-042,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #42,"Coords: (12.42, 77.42), Address: St_42 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-043,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #43,"Coords: (12.43, 77.43), Address: St_43 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-044,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #44,"Coords: (12.44, 77.44), Address: St_44 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-045,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #45,"Coords: (12.45, 77.45), Address: St_45 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-046,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #46,"Coords: (12.46, 77.46), Address: St_46 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-047,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #47,"Coords: (12.47, 77.47), Address: St_47 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-048,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #48,"Coords: (12.48, 77.48), Address: St_48 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-049,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #49,"Coords: (12.49, 77.49), Address: St_49 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-050,Citizen Mobile & Web Portal,Emergency SOS Dispatch,Citizen,Verify emergency creation map boundary telemetry check #50,"Coords: (12.50, 77.50), Address: St_50 Cross Road","1. Click emergency SOS button
+2. Auto-fetch GPS coordinates
+3. Confirm address details
+4. Trigger dispatch call","Create SOS record, display pending tracker and sync coordinates",Passed,Yes
+TC-CIT-051,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #51,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-052,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #52,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-053,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #53,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-054,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #54,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-055,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #55,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-056,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #56,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-057,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #57,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-058,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #58,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-059,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #59,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-060,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #60,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-061,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #61,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-062,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #62,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-063,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #63,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-064,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #64,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-065,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #65,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-066,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #66,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-067,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #67,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-068,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #68,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-069,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #69,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-070,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #70,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-071,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #71,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-072,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #72,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-073,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #73,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-074,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #74,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-075,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #75,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-076,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #76,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-077,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #77,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-078,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #78,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-079,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #79,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-080,Citizen Mobile & Web Portal,Live Tracking & ETA Map,Citizen,Verify map coordinates polling recycling update #80,"Polling Interval: 3000ms, Coordinate Recycler: Enabled","1. Open active dispatch tracker screen
+2. Wait for driver assignment
+3. Monitor ambulance coordinate updates on map",Live marker redraw without map redraw flickering,Passed,Yes
+TC-CIT-081,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #81,"Blood Group: O+, Allergies: Penicillin_81","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-082,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #82,"Blood Group: O+, Allergies: Penicillin_82","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-083,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #83,"Blood Group: O+, Allergies: Penicillin_83","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-084,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #84,"Blood Group: O+, Allergies: Penicillin_84","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-085,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #85,"Blood Group: O+, Allergies: Penicillin_85","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-086,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #86,"Blood Group: O+, Allergies: Penicillin_86","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-087,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #87,"Blood Group: O+, Allergies: Penicillin_87","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-088,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #88,"Blood Group: O+, Allergies: Penicillin_88","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-089,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #89,"Blood Group: O+, Allergies: Penicillin_89","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-090,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #90,"Blood Group: O+, Allergies: Penicillin_90","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-091,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #91,"Blood Group: O+, Allergies: Penicillin_91","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-092,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #92,"Blood Group: O+, Allergies: Penicillin_92","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-093,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #93,"Blood Group: O+, Allergies: Penicillin_93","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-094,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #94,"Blood Group: O+, Allergies: Penicillin_94","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-095,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #95,"Blood Group: O+, Allergies: Penicillin_95","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-096,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #96,"Blood Group: O+, Allergies: Penicillin_96","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-097,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #97,"Blood Group: O+, Allergies: Penicillin_97","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-098,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #98,"Blood Group: O+, Allergies: Penicillin_98","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-099,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #99,"Blood Group: O+, Allergies: Penicillin_99","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-CIT-100,Citizen Mobile & Web Portal,Medical Profiles & Contacts,Citizen,Verify updating emergency vitals and details checklist #100,"Blood Group: O+, Allergies: Penicillin_100","1. Open Profile tab
+2. Edit medical information forms
+3. Click Save changes","Database entry reflects updated values, no warnings",Passed,Yes
+TC-DRV-001,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #1,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-002,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #2,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-003,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #3,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-004,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #4,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-005,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #5,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-006,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #6,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-007,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #7,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-008,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #8,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-009,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #9,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-010,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #10,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-011,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #11,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-012,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #12,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-013,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #13,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-014,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #14,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-015,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #15,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-016,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #16,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-017,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #17,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-018,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #18,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-019,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #19,Duty Status: Offline,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-020,Driver Mobile App,Duty Status & Onboarding,Driver,Verify telemetry reporting and status transitions #20,Duty Status: Online,"1. Open Driver app
+2. Toggle Active Duty switch
+3. Check status on profile","Sync status in DB, check active dispatcher dashboard",Passed,Yes
+TC-DRV-021,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #21,"Mission ID: 121, Destination Coords: (12.21, 77.21)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-022,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #22,"Mission ID: 122, Destination Coords: (12.22, 77.22)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-023,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #23,"Mission ID: 123, Destination Coords: (12.23, 77.23)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-024,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #24,"Mission ID: 124, Destination Coords: (12.24, 77.24)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-025,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #25,"Mission ID: 125, Destination Coords: (12.25, 77.25)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-026,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #26,"Mission ID: 126, Destination Coords: (12.26, 77.26)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-027,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #27,"Mission ID: 127, Destination Coords: (12.27, 77.27)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-028,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #28,"Mission ID: 128, Destination Coords: (12.28, 77.28)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-029,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #29,"Mission ID: 129, Destination Coords: (12.29, 77.29)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-030,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #30,"Mission ID: 130, Destination Coords: (12.30, 77.30)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-031,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #31,"Mission ID: 131, Destination Coords: (12.31, 77.31)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-032,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #32,"Mission ID: 132, Destination Coords: (12.32, 77.32)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-033,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #33,"Mission ID: 133, Destination Coords: (12.33, 77.33)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-034,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #34,"Mission ID: 134, Destination Coords: (12.34, 77.34)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-035,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #35,"Mission ID: 135, Destination Coords: (12.35, 77.35)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-036,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #36,"Mission ID: 136, Destination Coords: (12.36, 77.36)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-037,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #37,"Mission ID: 137, Destination Coords: (12.37, 77.37)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-038,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #38,"Mission ID: 138, Destination Coords: (12.38, 77.38)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-039,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #39,"Mission ID: 139, Destination Coords: (12.39, 77.39)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-040,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #40,"Mission ID: 140, Destination Coords: (12.40, 77.40)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-041,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #41,"Mission ID: 141, Destination Coords: (12.41, 77.41)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-042,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #42,"Mission ID: 142, Destination Coords: (12.42, 77.42)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-043,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #43,"Mission ID: 143, Destination Coords: (12.43, 77.43)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-044,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #44,"Mission ID: 144, Destination Coords: (12.44, 77.44)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-045,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #45,"Mission ID: 145, Destination Coords: (12.45, 77.45)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-046,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #46,"Mission ID: 146, Destination Coords: (12.46, 77.46)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-047,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #47,"Mission ID: 147, Destination Coords: (12.47, 77.47)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-048,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #48,"Mission ID: 148, Destination Coords: (12.48, 77.48)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-049,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #49,"Mission ID: 149, Destination Coords: (12.49, 77.49)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-050,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #50,"Mission ID: 150, Destination Coords: (12.50, 77.50)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-051,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #51,"Mission ID: 151, Destination Coords: (12.51, 77.51)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-052,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #52,"Mission ID: 152, Destination Coords: (12.52, 77.52)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-053,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #53,"Mission ID: 153, Destination Coords: (12.53, 77.53)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-054,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #54,"Mission ID: 154, Destination Coords: (12.54, 77.54)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-055,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #55,"Mission ID: 155, Destination Coords: (12.55, 77.55)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-056,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #56,"Mission ID: 156, Destination Coords: (12.56, 77.56)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-057,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #57,"Mission ID: 157, Destination Coords: (12.57, 77.57)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-058,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #58,"Mission ID: 158, Destination Coords: (12.58, 77.58)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-059,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #59,"Mission ID: 159, Destination Coords: (12.59, 77.59)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-060,Driver Mobile App,Active Mission Dispatch,Driver,Verify Active Mission ETA routing updates #60,"Mission ID: 160, Destination Coords: (12.60, 77.60)","1. Receive dispatch prompt
+2. Click Accept Call
+3. Track directions to patient pickup site","Render Google Directions routing, draw target pin on map",Passed,Yes
+TC-DRV-061,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #61,"Heart Rate: 71 bpm, SpO2: 96%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-062,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #62,"Heart Rate: 72 bpm, SpO2: 97%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-063,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #63,"Heart Rate: 73 bpm, SpO2: 98%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-064,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #64,"Heart Rate: 74 bpm, SpO2: 99%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-065,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #65,"Heart Rate: 75 bpm, SpO2: 95%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-066,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #66,"Heart Rate: 76 bpm, SpO2: 96%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-067,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #67,"Heart Rate: 77 bpm, SpO2: 97%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-068,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #68,"Heart Rate: 78 bpm, SpO2: 98%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-069,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #69,"Heart Rate: 79 bpm, SpO2: 99%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-070,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #70,"Heart Rate: 70 bpm, SpO2: 95%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-071,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #71,"Heart Rate: 71 bpm, SpO2: 96%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-072,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #72,"Heart Rate: 72 bpm, SpO2: 97%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-073,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #73,"Heart Rate: 73 bpm, SpO2: 98%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-074,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #74,"Heart Rate: 74 bpm, SpO2: 99%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-075,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #75,"Heart Rate: 75 bpm, SpO2: 95%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-076,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #76,"Heart Rate: 76 bpm, SpO2: 96%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-077,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #77,"Heart Rate: 77 bpm, SpO2: 97%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-078,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #78,"Heart Rate: 78 bpm, SpO2: 98%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-079,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #79,"Heart Rate: 79 bpm, SpO2: 99%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-080,Driver Mobile App,Vitals Streaming,Driver,Verify patient vital statistics streaming #80,"Heart Rate: 70 bpm, SpO2: 95%","1. Access Active Mission dashboard
+2. Input patient vitals parameters
+3. Press Sync telemetry data","Send vital payload to database, display hospital warning feeds",Passed,Yes
+TC-DRV-081,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #81,Search Radius: 11 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-082,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #82,Search Radius: 12 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-083,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #83,Search Radius: 13 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-084,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #84,Search Radius: 14 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-085,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #85,Search Radius: 15 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-086,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #86,Search Radius: 16 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-087,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #87,Search Radius: 17 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-088,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #88,Search Radius: 18 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-089,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #89,Search Radius: 19 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-090,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #90,Search Radius: 10 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-091,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #91,Search Radius: 11 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-092,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #92,Search Radius: 12 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-093,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #93,Search Radius: 13 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-094,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #94,Search Radius: 14 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-095,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #95,Search Radius: 15 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-096,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #96,Search Radius: 16 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-097,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #97,Search Radius: 17 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-098,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #98,Search Radius: 18 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-099,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #99,Search Radius: 19 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-DRV-100,Driver Mobile App,Hospital Telemetry Sync,Driver,Verify nearby hospital bed telemetry lookup #100,Search Radius: 10 km,"1. Click check nearby hospitals
+2. Load bed capacities list card
+3. Verify ICU/NICU vacancy counts","Display dynamic card with bed telemetry, highlight open centers",Passed,Yes
+TC-ADM-001,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #1,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-002,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #2,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-003,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #3,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-004,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #4,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-005,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #5,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-006,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #6,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-007,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #7,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-008,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #8,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-009,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #9,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-010,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #10,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-011,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #11,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-012,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #12,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-013,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #13,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-014,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #14,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-015,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #15,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-016,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #16,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-017,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #17,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-018,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #18,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-019,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #19,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-020,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #20,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-021,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #21,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-022,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #22,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-023,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #23,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-024,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #24,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-025,Admin Operations Center,Live Command Monitor,Admin,Verify active dispatches status tracker radar #25,"Map Mode: Roadmap, Filter: Active Only","1. Load Admin Monitor dashboard
+2. View active dispatches feed
+3. Select ambulance pointer marker","Plot real-time driver coordinates overlays, update status card",Passed,Yes
+TC-ADM-026,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #26,"Request ID: #176, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-027,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #27,"Request ID: #177, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-028,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #28,"Request ID: #178, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-029,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #29,"Request ID: #179, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-030,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #30,"Request ID: #180, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-031,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #31,"Request ID: #181, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-032,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #32,"Request ID: #182, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-033,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #33,"Request ID: #183, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-034,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #34,"Request ID: #184, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-035,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #35,"Request ID: #185, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-036,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #36,"Request ID: #186, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-037,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #37,"Request ID: #187, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-038,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #38,"Request ID: #188, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-039,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #39,"Request ID: #189, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-040,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #40,"Request ID: #190, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-041,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #41,"Request ID: #191, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-042,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #42,"Request ID: #192, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-043,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #43,"Request ID: #193, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-044,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #44,"Request ID: #194, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-045,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #45,"Request ID: #195, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-046,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #46,"Request ID: #196, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-047,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #47,"Request ID: #197, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-048,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #48,"Request ID: #198, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-049,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #49,"Request ID: #199, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-050,Admin Operations Center,SOS Request Logs,Admin,Verify emergency audit and cancel dispatch overrides #50,"Request ID: #200, Action: Cancel","1. Open Admin SOS screen
+2. Locate target request record
+3. Click Cancel booking
+4. Confirm prompt warning","Set request status to cancelled, release driver duty lock",Passed,Yes
+TC-ADM-051,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #51,"Name: Citizen_User_51, Phone: 9876543051","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-052,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #52,"Name: Citizen_User_52, Phone: 9876543052","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-053,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #53,"Name: Citizen_User_53, Phone: 9876543053","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-054,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #54,"Name: Citizen_User_54, Phone: 9876543054","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-055,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #55,"Name: Citizen_User_55, Phone: 9876543055","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-056,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #56,"Name: Citizen_User_56, Phone: 9876543056","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-057,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #57,"Name: Citizen_User_57, Phone: 9876543057","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-058,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #58,"Name: Citizen_User_58, Phone: 9876543058","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-059,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #59,"Name: Citizen_User_59, Phone: 9876543059","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-060,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #60,"Name: Citizen_User_60, Phone: 9876543060","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-061,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #61,"Name: Citizen_User_61, Phone: 9876543061","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-062,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #62,"Name: Citizen_User_62, Phone: 9876543062","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-063,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #63,"Name: Citizen_User_63, Phone: 9876543063","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-064,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #64,"Name: Citizen_User_64, Phone: 9876543064","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-065,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #65,"Name: Citizen_User_65, Phone: 9876543065","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-066,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #66,"Name: Citizen_User_66, Phone: 9876543066","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-067,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #67,"Name: Citizen_User_67, Phone: 9876543067","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-068,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #68,"Name: Citizen_User_68, Phone: 9876543068","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-069,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #69,"Name: Citizen_User_69, Phone: 9876543069","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-070,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #70,"Name: Citizen_User_70, Phone: 9876543070","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-071,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #71,"Name: Citizen_User_71, Phone: 9876543071","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-072,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #72,"Name: Citizen_User_72, Phone: 9876543072","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-073,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #73,"Name: Citizen_User_73, Phone: 9876543073","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-074,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #74,"Name: Citizen_User_74, Phone: 9876543074","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-075,Admin Operations Center,Citizen Management,Admin,Verify adding and editing citizen data entries #75,"Name: Citizen_User_75, Phone: 9876543075","1. Open Citizen Mgmt
+2. Click Add Citizen
+3. Enter details form
+4. Submit data",New user record created with role citizen in DB,Passed,Yes
+TC-ADM-076,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #76,"Alert Title: Emergency Alert #76, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-077,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #77,"Alert Title: Emergency Alert #77, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-078,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #78,"Alert Title: Emergency Alert #78, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-079,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #79,"Alert Title: Emergency Alert #79, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-080,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #80,"Alert Title: Emergency Alert #80, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-081,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #81,"Alert Title: Emergency Alert #81, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-082,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #82,"Alert Title: Emergency Alert #82, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-083,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #83,"Alert Title: Emergency Alert #83, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-084,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #84,"Alert Title: Emergency Alert #84, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-085,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #85,"Alert Title: Emergency Alert #85, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-086,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #86,"Alert Title: Emergency Alert #86, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-087,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #87,"Alert Title: Emergency Alert #87, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-088,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #88,"Alert Title: Emergency Alert #88, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-089,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #89,"Alert Title: Emergency Alert #89, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-090,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #90,"Alert Title: Emergency Alert #90, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-091,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #91,"Alert Title: Emergency Alert #91, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-092,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #92,"Alert Title: Emergency Alert #92, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-093,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #93,"Alert Title: Emergency Alert #93, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-094,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #94,"Alert Title: Emergency Alert #94, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-095,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #95,"Alert Title: Emergency Alert #95, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-096,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #96,"Alert Title: Emergency Alert #96, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-097,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #97,"Alert Title: Emergency Alert #97, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-098,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #98,"Alert Title: Emergency Alert #98, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-099,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #99,"Alert Title: Emergency Alert #99, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
+TC-ADM-100,Admin Operations Center,Security & Notifications,Admin,Verify administrative security changes and alerts #100,"Alert Title: Emergency Alert #100, Target: All Users","1. Open Admin Settings
+2. Modify default parameter values
+3. Click Save policies",Global options successfully saved to configurations table,Passed,Yes
