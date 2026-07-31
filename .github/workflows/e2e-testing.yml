@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies
+        run: npm install selenium-webdriver
+
       - name: Run Web Selenium E2E Tests
         run: |
           echo "Running 300 Selenium Website E2E Test Cases..."
@@ -42,6 +45,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Install dependencies
+        run: npm install webdriverio
 
       - name: Run Appium Mobile E2E Tests
         run: |
