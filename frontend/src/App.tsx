@@ -24,9 +24,7 @@ import DriverDashboard from './pages/driver/DriverDashboard';
 import ActiveMission from './pages/driver/ActiveMission';
 import DriverHistory from './pages/driver/DriverHistory';
 import DriverProfile from './pages/driver/DriverProfile';
-import DriverVehicle from './pages/driver/DriverVehicle';
 import DriverNotifications from './pages/driver/DriverNotifications';
-import DriverSettings from './pages/driver/DriverSettings';
 import DriverHelp from './pages/driver/DriverHelp';
 import AdminLayout from './components/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -207,10 +205,8 @@ const AppContent: React.FC = () => {
           <Route index element={<DriverDashboard />} />
           <Route path="trip" element={<ActiveMission />} />
           <Route path="history" element={<DriverHistory />} />
-          <Route path="vehicle" element={<DriverVehicle />} />
           <Route path="profile" element={<DriverProfile />} />
           <Route path="notifications" element={<DriverNotifications />} />
-          <Route path="settings" element={<DriverSettings />} />
           <Route path="help" element={<DriverHelp />} />
         </Route>
 

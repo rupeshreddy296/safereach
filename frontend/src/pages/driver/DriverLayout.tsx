@@ -3,8 +3,8 @@ import { Outlet, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import axios from '../../api/axios';
 import {
-  LogOut, ShieldAlert, Activity, Truck, 
-  Settings, HelpCircle, Bell,
+  LogOut, ShieldAlert, Activity,
+  HelpCircle, Bell,
   MapPin, Navigation, Clock, User
 } from 'lucide-react';
 
@@ -97,14 +97,12 @@ const DriverLayout: React.FC = () => {
     { name: 'Dashboard', href: '/driver', icon: Activity },
     { name: 'Active Mission', href: '/driver/trip', icon: Navigation },
     { name: 'Trip History', href: '/driver/history', icon: Clock },
-    { name: 'Ambulance Details', href: '/driver/vehicle', icon: Truck },
     { name: 'My Profile', href: '/driver/profile', icon: User },
     { name: 'Notifications', href: '/driver/notifications', icon: Bell },
   ];
 
   const bottomNavigation = [
     { name: 'Help & Support', href: '/driver/help', icon: HelpCircle },
-    { name: 'Settings', href: '/driver/settings', icon: Settings },
   ];
 
   return (
