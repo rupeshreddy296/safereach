@@ -107,34 +107,6 @@ jobs:
           python selenium-tests/generate_all_reports.py
           python selenium-tests/generate_test_cases.py
 
-      - name: Generate GitHub Actions Step Summary
-        run: |
-          cat << 'EOF' >> $GITHUB_STEP_SUMMARY
-          # 🧪 SafeReach Automated E2E Testing Summary
-
-          ### 📊 Consolidated Verification Matrix (1,800 Total Test Cases)
-
-          | Test Suite | ID Prefix | Scope & Role | Test Cases | Status | Automated |
-          | :--- | :---: | :--- | :---: | :---: | :---: |
-          | **Selenium Web Suite** | `TC-SEL-001...300` | Citizen & Admin Web Portals | 300 | ✅ Passed | Yes |
-          | **Appium Android Suite** | `TC-APP-001...300` | Driver & Citizen Mobile APK | 300 | ✅ Passed | Yes |
-          | **API Unit Tests** | `TC-UNI-001...300` | PHP REST Endpoints & Auth | 300 | ✅ Passed | Yes |
-          | **Input Validation Tests** | `TC-VAL-001...300` | Boundary & Parameter Guards | 300 | ✅ Passed | Yes |
-          | **Deployment Integrity** | `TC-DEP-001...300` | Production & DB Consistency | 300 | ✅ Passed | Yes |
-          | **Load & Stress Benchmarks** | `TC-LOD-001...300` | Telemetry & Hospital Polling | 300 | ✅ Passed | Yes |
-          | **TOTAL CONSOLIDATED** | — | **All Subsystems** | **1,800** | **✅ 100% Passed** | **Yes** |
-
-          ---
-
-          ### 📱 Core User Journey Matrix (300 Test Cases)
-          - **Citizen Mobile & Web Portal (100 Cases)**: \`TC-CIT-001\` to \`TC-CIT-100\` (Auth, SOS Dispatch, Map Bounds, Medical Vitals)
-          - **Driver Mobile Application (100 Cases)**: \`TC-DRV-001\` to \`TC-DRV-100\` (Duty Switch, Route Navigation, Telemetry Sync, Hospital Bed Radar)
-          - **Admin Command Operations (100 Cases)**: \`TC-ADM-001\` to \`TC-ADM-100\` (Live Fleet Radar, SOS Overrides, Citizen Management, Security Audits)
-
-          > [!NOTE]
-          > Full CSV report matrices are compiled and available in the **Artifacts** section below (\`full-e2e-report\`, \`core-test-cases-matrix\`, and individual suite reports).
-          EOF
-
       - name: Upload Consolidated E2E Report
         uses: actions/upload-artifact@v4
         with:

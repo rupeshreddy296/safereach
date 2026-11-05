@@ -1,8 +1,11 @@
 import csv
 import os
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+
 def generate_test_cases():
-    dest_path = r"c:\Users\rupes\AndroidStudioProjects\SAFEREACH3\selenium-tests\test_cases.csv"
+    dest_path = os.path.join(SCRIPT_DIR, "test_cases.csv")
     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
     
     headers = [
