@@ -14,7 +14,7 @@ const api = axios.create({
 });
 
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('safereach_token');
+  const token = sessionStorage.getItem('safereach_token');
   if (token && config.headers) {
     config.headers.Authorization = `Bearer ${token}`;
   }
@@ -25,8 +25,8 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      localStorage.removeItem('safereach_token');
-      localStorage.removeItem('safereach_user');
+      sessionStorage.removeItem('safereach_token');
+      sessionStorage.removeItem('safereach_user');
       window.location.hash = '#login';
     }
     return Promise.reject(error);

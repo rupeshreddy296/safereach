@@ -28,7 +28,7 @@ class DriverViewModel : ViewModel() {
             try {
                 val status = if (isOnline) "available" else "offline"
                 val response = RetrofitClient.apiService.updateDriverStatus(DriverStatusRequest(status))
-                if (response.isSuccessful && response.body()?.success == true) {
+                if (response.isSuccessful && (response.body()?.success == true)) {
                     response.body()?.data?.let {
                         _statusState.value = DriverUiState.Success(it)
                     } ?: run { _statusState.value = DriverUiState.Error("Status updated but no data") }

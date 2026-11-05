@@ -27,7 +27,7 @@ class AuthViewModel : ViewModel() {
             _authState.value = AuthState.Loading
             try {
                 val response = RetrofitClient.apiService.login(LoginRequest(email, password))
-                if (response.isSuccessful && response.body()?.success == true) {
+                if (response.isSuccessful && (response.body()?.success == true)) {
                     val data = response.body()?.data
                     if (data != null) {
                         RetrofitClient.setToken(data.token)
@@ -57,7 +57,7 @@ class AuthViewModel : ViewModel() {
                     ambulanceType = ambulanceType
                 )
                 val response = RetrofitClient.apiService.register(request)
-                if (response.isSuccessful && response.body()?.success == true) {
+                if (response.isSuccessful && (response.body()?.success == true)) {
                     _authState.value = AuthState.RegistrationSuccess
                 } else {
                     _authState.value = AuthState.Error(response.body()?.message ?: "Registration failed")

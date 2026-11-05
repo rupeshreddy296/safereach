@@ -17,6 +17,9 @@ local.properties
 # Web Frontend Ignores
 node_modules/
 frontend/node_modules/
+safereach-mobile/node_modules/
+.expo/
+safereach-mobile/.expo/
 dist/
 frontend/dist/
 .env

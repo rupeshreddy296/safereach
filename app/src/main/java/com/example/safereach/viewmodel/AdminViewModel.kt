@@ -27,7 +27,7 @@ class AdminViewModel : ViewModel() {
             _hospitalsState.value = AdminUiState.Loading
             try {
                 val response = RetrofitClient.apiService.getHospitals()
-                if (response.isSuccessful && response.body()?.success == true) {
+                if (response.isSuccessful && (response.body()?.success == true)) {
                     _hospitalsState.value = AdminUiState.Success(response.body()?.data ?: emptyList())
                 } else {
                     _hospitalsState.value = AdminUiState.Error(response.body()?.message ?: "Failed to fetch hospitals")
@@ -44,7 +44,7 @@ class AdminViewModel : ViewModel() {
             try {
                 // Admin might use same history endpoint or a special one if available
                 val response = RetrofitClient.apiService.getRequestsHistory()
-                if (response.isSuccessful && response.body()?.success == true) {
+                if (response.isSuccessful && (response.body()?.success == true)) {
                     _requestsState.value = AdminUiState.Success(response.body()?.data ?: emptyList())
                 } else {
                     _requestsState.value = AdminUiState.Error(response.body()?.message ?: "Failed to fetch requests")

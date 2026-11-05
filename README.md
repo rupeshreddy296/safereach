@@ -82,10 +82,10 @@ SAFEREACH3/
 
 ### 4. Android Studio Setup
 1. Open the project root directory in **Android Studio**.
-2. Gradle will sync files. Make sure the API base URL in `app/src/main/java/com/example/safereach/network/RetrofitClient.kt` points to your computer's local IP address (e.g. `http://172.23.50.133/safereach/`).
+2. Verify the API base URL in `app/src/main/java/com/example/safereach/network/RetrofitClient.kt` points to your computer's local IP address (e.g., `http://10.98.13.174/safereach/`).
 3. Compile and build the debug APK using Gradle wrapper:
    ```bash
-   gradlew.bat assembleDebug
+   .\gradlew.bat assembleDebug
    ```
 
 ---

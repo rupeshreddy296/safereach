@@ -7,7 +7,7 @@ require_once '../../config/db.php';
 require_once '../../helpers/auth.php';
 require_once '../../helpers/response.php';
 
-$auth = JWT::authenticate();
+$auth = Auth::getAuthenticatedUser();
 if (!$auth || $auth['role'] !== 'driver') {
     Response::send(false, "Unauthorized. Driver access only.", null, 401);
 }

@@ -101,9 +101,6 @@ const DriverLayout: React.FC = () => {
     { name: 'Notifications', href: '/driver/notifications', icon: Bell },
   ];
 
-  const bottomNavigation = [
-    { name: 'Help & Support', href: '/driver/help', icon: HelpCircle },
-  ];
 
   return (
     <div className="min-h-screen bg-slate-950 flex overflow-hidden font-sans text-slate-300">
@@ -148,27 +145,7 @@ const DriverLayout: React.FC = () => {
             })}
           </div>
 
-          <div className="mb-6 px-2">
-            <h3 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3">System</h3>
-            {bottomNavigation.map((item) => {
-              const Icon = item.icon;
-              const isActive = location.pathname === item.href;
-              return (
-                <NavLink
-                  key={item.name}
-                  to={item.href}
-                  className={`flex items-center px-3 py-2.5 mb-1 rounded-xl text-sm font-bold transition-all duration-300 ${
-                    isActive 
-                      ? 'bg-emerald-500/10 text-emerald-400' 
-                      : 'text-slate-400 hover:bg-white/5 hover:text-white'
-                  }`}
-                >
-                  <Icon className={`w-4 h-4 mr-3 ${isActive ? 'text-emerald-400' : 'text-slate-500'}`} />
-                  {item.name}
-                </NavLink>
-              );
-            })}
-          </div>
+
         </div>
 
         {/* User / Duty Status Panel at Bottom */}

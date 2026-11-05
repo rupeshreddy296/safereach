@@ -19,7 +19,7 @@ try {
     switch ($method) {
         case 'GET':
             // Read Ambulances List
-            $query = "SELECT a.ambulance_id, a.driver_id, a.vehicle_number, a.ambulance_type, a.status, a.current_latitude, a.current_longitude, a.updated_at,
+            $query = "SELECT a.ambulance_id, a.driver_id, a.vehicle_number AS plate_number, a.ambulance_type AS vehicle_model, a.ambulance_type, a.status, a.current_latitude, a.current_longitude, a.updated_at,
                              u.full_name AS driver_name, u.phone_number AS driver_phone
                       FROM ambulances a
                       LEFT JOIN users u ON a.driver_id = u.user_id

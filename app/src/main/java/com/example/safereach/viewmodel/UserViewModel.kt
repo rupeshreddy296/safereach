@@ -36,7 +36,7 @@ class UserViewModel : ViewModel() {
             _profileState.value = UserUiState.Loading
             try {
                 val response = RetrofitClient.apiService.getProfile()
-                if (response.isSuccessful && response.body()?.success == true) {
+                if (response.isSuccessful && (response.body()?.success == true)) {
                     response.body()?.data?.let {
                         _profileState.value = UserUiState.Success(it)
                     } ?: run { _profileState.value = UserUiState.Error("No data") }
@@ -54,7 +54,7 @@ class UserViewModel : ViewModel() {
             _profileState.value = UserUiState.Loading
             try {
                 val response = RetrofitClient.apiService.updateProfile(request)
-                if (response.isSuccessful && response.body()?.success == true) {
+                if (response.isSuccessful && (response.body()?.success == true)) {
                     response.body()?.data?.let {
                         _profileState.value = UserUiState.Success(it)
                     } ?: run { _profileState.value = UserUiState.Error("Update successful but no data") }
@@ -72,7 +72,7 @@ class UserViewModel : ViewModel() {
             _addressesState.value = UserUiState.Loading
             try {
                 val response = RetrofitClient.apiService.getAddresses()
-                if (response.isSuccessful && response.body()?.success == true) {
+                if (response.isSuccessful && (response.body()?.success == true)) {
                     _addressesState.value = UserUiState.Success(response.body()?.data ?: emptyList())
                 } else {
                     _addressesState.value = UserUiState.Error(response.body()?.message ?: "Failed to fetch addresses")

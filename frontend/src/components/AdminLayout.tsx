@@ -24,7 +24,6 @@ const AdminLayout: React.FC = () => {
     { name: 'Citizen Mgmt', path: '/admin/citizens', icon: Users },
     { name: 'Ambulances', path: '/admin/ambulances', icon: Truck },
     { name: 'Hospitals', path: '/admin/hospitals', icon: Building2 },
-    { name: 'Analytics', path: '/admin/analytics', icon: Activity },
     { name: 'Reports', path: '/admin/reports', icon: FileText },
     { name: 'Notifications', path: '/admin/notifications', icon: Bell },
     { name: 'Settings', path: '/admin/settings', icon: Settings },
@@ -98,20 +97,7 @@ const AdminLayout: React.FC = () => {
             <h1 className="font-heading text-lg font-bold">Emergency Operations</h1>
           </div>
           
-          <div className="flex items-center gap-4">
-            <div className="relative hidden md:block">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size={14} />
-              <input 
-                type="text" 
-                placeholder="Global tracking search..." 
-                className="bg-slate-900/50 border border-white/10 rounded-full py-1.5 pl-9 pr-4 text-xs text-white focus:outline-none focus:border-white/20 w-64 transition"
-              />
-            </div>
-            <button className="relative p-2 text-gray-400 hover:text-white transition rounded-full hover:bg-white/5">
-              <Bell size={18} />
-              <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-accentRed rounded-full border border-darkBg"></span>
-            </button>
-          </div>
+          {/* Global search and notifications bell removed */}
         </header>
 
         {/* Scrollable Page Content */}

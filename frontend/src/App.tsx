@@ -25,7 +25,7 @@ import ActiveMission from './pages/driver/ActiveMission';
 import DriverHistory from './pages/driver/DriverHistory';
 import DriverProfile from './pages/driver/DriverProfile';
 import DriverNotifications from './pages/driver/DriverNotifications';
-import DriverHelp from './pages/driver/DriverHelp';
+
 import AdminLayout from './components/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminMonitor from './pages/admin/AdminMonitor';
@@ -46,7 +46,22 @@ const iconMap: Record<string, any> = {
 };
 
 const AppContent: React.FC = () => {
-  const { globalLoading, toasts } = useAuth();
+  const { globalLoading, toasts, user } = useAuth();
+
+  // Antigravity Real-time Bridge
+  React.useEffect(() => {
+    if (!user) return;
+
+    const eventSource = new EventSource('http://localhost/safereach/api/events/stream.php');
+
+    eventSource.addEventListener('new_request', (e) => {
+      const data = JSON.parse(e.data);
+      // Logic to handle new request globally on web
+      console.log('New request received via Antigravity Bridge:', data);
+    });
+
+    return () => eventSource.close();
+  }, [user]);
 
   const getLucideIcon = (name: string, props: any = {}) => {
     const IconComponent = iconMap[name] || iconMap.HelpCircle;
@@ -206,7 +221,7 @@ const AppContent: React.FC = () => {
           <Route path="history" element={<DriverHistory />} />
           <Route path="profile" element={<DriverProfile />} />
           <Route path="notifications" element={<DriverNotifications />} />
-          <Route path="help" element={<DriverHelp />} />
+
         </Route>
 
         {/* Protected Admin Routes */}

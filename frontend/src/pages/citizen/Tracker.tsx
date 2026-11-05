@@ -102,6 +102,34 @@ const Tracker: React.FC = () => {
     }
   }, [id]);
 
+  // Stream citizen's live location to the server so the driver/hospital knows exactly where they are in real-time
+  useEffect(() => {
+    if (!id || !activeRequest || ['boarded', 'completed', 'cancelled'].includes(activeRequest.status)) {
+      return;
+    }
+
+    if (navigator.geolocation) {
+      const watchId = navigator.geolocation.watchPosition(
+        async (position) => {
+          const { latitude, longitude } = position.coords;
+          try {
+            await axios.post('/requests/update_location.php', {
+              request_id: parseInt(id),
+              latitude,
+              longitude
+            });
+          } catch (err) {
+            console.warn("Failed to stream citizen location updates", err);
+          }
+        },
+        (error) => console.warn("Citizen location tracking error", error),
+        { enableHighAccuracy: true, maximumAge: 10000, timeout: 5000 }
+      );
+
+      return () => navigator.geolocation.clearWatch(watchId);
+    }
+  }, [id, activeRequest?.status]);
+
   const updateTrackingMapPins = (data: any) => {
     if (!mapContainerRef.current || typeof google === 'undefined') return;
 

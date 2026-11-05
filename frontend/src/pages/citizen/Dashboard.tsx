@@ -388,6 +388,56 @@ const Dashboard: React.FC = () => {
             </button>
           </form>
         </div>
+
+        {/* Emergency Contacts Widget */}
+        <div className="glass-panel rounded-2xl p-6 border border-white/5 shadow-xl space-y-4">
+          <div>
+            <h2 className="text-sm font-heading font-extrabold text-white">Emergency Hotline Contacts</h2>
+            <p className="text-gray-400 text-[10px] mt-0.5">Quick access dial numbers for instant support</p>
+          </div>
+          
+          <div className="grid grid-cols-1 gap-2.5">
+            <div className="flex items-center justify-between p-3 rounded-xl bg-red-500/10 border border-red-500/20">
+              <div>
+                <p className="text-xs font-extrabold text-white">SafeReach Command ER</p>
+                <p className="text-[10px] text-red-400 font-semibold mt-0.5">Saveetha Campus Dispatch</p>
+              </div>
+              <a href="tel:+914466726616" className="px-2.5 py-1.5 bg-red-600 hover:bg-red-500 text-white text-[10px] font-bold rounded-lg transition shadow-md">
+                +91 44 6672 6616
+              </a>
+            </div>
+
+            <div className="flex items-center justify-between p-3 rounded-xl bg-blue-500/10 border border-blue-500/20">
+              <div>
+                <p className="text-xs font-extrabold text-white">National Ambulance Services</p>
+                <p className="text-[10px] text-blue-400 font-semibold mt-0.5">Primary Medical Response</p>
+              </div>
+              <a href="tel:102" className="px-2.5 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold rounded-lg transition shadow-md">
+                Dial 102
+              </a>
+            </div>
+
+            <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-white/5">
+              <div>
+                <p className="text-xs font-extrabold text-white">National Emergency Hotline</p>
+                <p className="text-[10px] text-gray-400 font-semibold mt-0.5">Universal SOS Access</p>
+              </div>
+              <a href="tel:112" className="px-2.5 py-1.5 bg-slate-900 hover:bg-slate-800 text-white text-[10px] font-bold rounded-lg transition border border-white/5">
+                Dial 112
+              </a>
+            </div>
+
+            <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-white/5">
+              <div>
+                <p className="text-xs font-extrabold text-white">Fire & Rescue Services</p>
+                <p className="text-[10px] text-gray-400 font-semibold mt-0.5">Fire Accidents Support</p>
+              </div>
+              <a href="tel:101" className="px-2.5 py-1.5 bg-slate-900 hover:bg-slate-800 text-white text-[10px] font-bold rounded-lg transition border border-white/5">
+                Dial 101
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Right Map */}

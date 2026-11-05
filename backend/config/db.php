@@ -2,7 +2,7 @@
 // backend/config/db.php
 
 class Database {
-    private $host = "localhost";
+    private $host = "127.0.0.1";
     private $db_name = "safereach";
     private $username = "root";
     private $password = "";

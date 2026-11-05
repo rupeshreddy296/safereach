@@ -61,20 +61,40 @@
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* Force clarity on Google Maps without API Key (for development use only) */
+/* Suppress Google Maps API Error Modals, Banners, and Overlays */
 .gm-err-container,
+.gm-err-modal,
+.gm-style-err,
+.gm-style-err-container,
+.gm-style-err-modal,
 .gm-err-content,
 .gm-err-title,
-.dismissButton {
+.dismissButton,
+.gm-style-cc,
+.gmnoprint,
+.gm-style-watermark {
   display: none !important;
 }
-/* Hide the 'For development purposes only' watermark overlay */
+
+/* Hide the gray/white blocker overlay and warning pop-ups dynamically */
+div[style*="background-color: white"][style*="z-index: 1000002"],
+div[style*="z-index: 1000002"],
+div[style*="z-index: 1000003"],
+div[style*="z-index: 1000004"],
+div[style*="opacity: 0.5"],
+div[style*="background-color: rgba(0, 0, 0, 0.5)"],
+iframe[src*="about:blank"] {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Re-enable map pointer interactions */
+.gm-style iframe + div {
+  border: none !important;
+  pointer-events: none !important;
+}
 .gm-style div > div > div > div:nth-child(2) {
   opacity: 0 !important;
   display: none !important;
 }
-.gm-style-bg {
-  display: none !important;
-}
-/* Re-enable interactions if blocked */
-.gm-style iframe + div { border: none !important; pointer-events: none !important; }

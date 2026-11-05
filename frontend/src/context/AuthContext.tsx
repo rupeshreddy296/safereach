@@ -38,15 +38,15 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [token, setToken] = useState<string | null>(localStorage.getItem('safereach_token'));
+  const [token, setToken] = useState<string | null>(sessionStorage.getItem('safereach_token'));
   const [user, setUser] = useState<User | null>(() => {
-    const u = localStorage.getItem('safereach_user');
+    const u = sessionStorage.getItem('safereach_user');
     return u ? JSON.parse(u) : null;
   });
   const [globalLoading, setGlobalLoading] = useState<boolean>(false);
   const [toasts, setToasts] = useState<Toast[]>([]);
   const [unreadAlertsCount, setUnreadAlertsCount] = useState<number>(0);
-
+  
   const showToast = (title: string, desc: string, type: 'success' | 'error' | 'info' | 'warning') => {
     const id = Date.now();
     setToasts((prev) => [...prev, { id, title, desc, type }]);
@@ -58,8 +58,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const login = (jwtToken: string, userData: User) => {
     setToken(jwtToken);
     setUser(userData);
-    localStorage.setItem('safereach_token', jwtToken);
-    localStorage.setItem('safereach_user', JSON.stringify(userData));
+    sessionStorage.setItem('safereach_token', jwtToken);
+    sessionStorage.setItem('safereach_user', JSON.stringify(userData));
     
     // Set axios auth header immediately
     axios.defaults.headers.common['Authorization'] = `Bearer ${jwtToken}`;
@@ -69,15 +69,15 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setToken(null);
     setUser(null);
     setUnreadAlertsCount(0);
-    localStorage.removeItem('safereach_token');
-    localStorage.removeItem('safereach_user');
+    sessionStorage.removeItem('safereach_token');
+    sessionStorage.removeItem('safereach_user');
     delete axios.defaults.headers.common['Authorization'];
     showToast("Session Closed", "Successfully logged out from SafeReach.", "info");
   };
 
   const updateUserLocal = (updatedUser: User) => {
     setUser(updatedUser);
-    localStorage.setItem('safereach_user', JSON.stringify(updatedUser));
+    sessionStorage.setItem('safereach_user', JSON.stringify(updatedUser));
   };
 
   const refreshUnreadAlerts = async () => {

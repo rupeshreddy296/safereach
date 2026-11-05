@@ -11,7 +11,9 @@ import java.util.concurrent.TimeUnit
 object RetrofitClient {
     // 10.0.2.2 connects the Android Emulator to your computer's localhost.
     // NOTE: Do not include "htdocs" in the URL. XAMPP serves files directly from that folder.
-    private const val BASE_URL = "http://172.23.50.133/safereach/"
+    private const val BASE_URL = "http://10.98.13.174/safereach/"
+
+    fun getBaseUrl(): String = BASE_URL
 
     private var authToken: String? = null
 

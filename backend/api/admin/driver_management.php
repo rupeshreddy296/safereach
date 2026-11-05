@@ -19,7 +19,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'GET') {
     try {
         $query = "SELECT u.user_id, u.full_name, u.email, u.phone_number, u.status, u.created_at,
-                         a.ambulance_id, a.plate_number
+                         a.ambulance_id, a.vehicle_number AS plate_number, a.ambulance_type,
+                         a.license_number, a.license_expiry, a.experience_years, a.driver_role
                   FROM users u
                   LEFT JOIN ambulances a ON u.user_id = a.driver_id
                   WHERE u.role = 'driver'
