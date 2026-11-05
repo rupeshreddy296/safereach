@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './context/AuthContext';
+import { AuthProvider, useAuth, BYPASS_LOGIN_MODE } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import CitizenLayout from './components/CitizenLayout';
 
@@ -46,7 +46,7 @@ const iconMap: Record<string, any> = {
 };
 
 const AppContent: React.FC = () => {
-  const { globalLoading, toasts, user } = useAuth();
+  const { globalLoading, toasts, user, switchRole } = useAuth();
 
   // Antigravity Real-time Bridge
   React.useEffect(() => {
@@ -109,8 +109,8 @@ const AppContent: React.FC = () => {
 
       <Routes>
         {/* Public Routes */}
-        <Route path="/" element={<Welcome />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={BYPASS_LOGIN_MODE ? <Navigate to="/citizen" replace /> : <Welcome />} />
+        <Route path="/login" element={BYPASS_LOGIN_MODE ? <Navigate to="/citizen" replace /> : <Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
@@ -250,6 +250,32 @@ const AppContent: React.FC = () => {
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      {BYPASS_LOGIN_MODE && (
+        <div className="fixed bottom-4 right-4 z-[9999] bg-slate-900/95 border border-white/10 shadow-2xl rounded-2xl p-2.5 flex items-center gap-2 backdrop-blur-md text-xs">
+          <span className="text-gray-400 font-semibold px-1">Login Bypassed:</span>
+          <a
+            href="/citizen"
+            onClick={() => switchRole('user')}
+            className={`px-3 py-1.5 rounded-xl font-bold transition ${user?.role === 'user' ? 'bg-accentRed text-white shadow' : 'bg-white/5 text-gray-300 hover:bg-white/10'}`}
+          >
+            Citizen
+          </a>
+          <a
+            href="/driver"
+            onClick={() => switchRole('driver')}
+            className={`px-3 py-1.5 rounded-xl font-bold transition ${user?.role === 'driver' ? 'bg-amber-500 text-slate-950 shadow' : 'bg-white/5 text-gray-300 hover:bg-white/10'}`}
+          >
+            Driver
+          </a>
+          <a
+            href="/admin/dashboard"
+            onClick={() => switchRole('admin')}
+            className={`px-3 py-1.5 rounded-xl font-bold transition ${user?.role === 'admin' ? 'bg-blue-600 text-white shadow' : 'bg-white/5 text-gray-300 hover:bg-white/10'}`}
+          >
+            Admin
+          </a>
+        </div>
+      )}
     </BrowserRouter>
   );
 };

@@ -21,6 +21,17 @@ interface Toast {
   type: 'success' | 'error' | 'info' | 'warning';
 }
 
+// FLAG: Set to true to remove the login page & username/password requirement.
+// Change back to false whenever you want the login page restored.
+export const BYPASS_LOGIN_MODE = true;
+
+const DEFAULT_BYPASS_USER: User = {
+  user_id: 1,
+  full_name: 'Rupesh',
+  email: 'rupesh112599@gmail.com',
+  role: 'user',
+};
+
 interface AuthContextType {
   token: string | null;
   user: User | null;
@@ -33,15 +44,24 @@ interface AuthContextType {
   logout: () => void;
   updateUserLocal: (updatedUser: User) => void;
   refreshUnreadAlerts: () => Promise<void>;
+  switchRole: (role: 'user' | 'driver' | 'admin') => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [token, setToken] = useState<string | null>(sessionStorage.getItem('safereach_token'));
+  const [token, setToken] = useState<string | null>(() => {
+    const t = sessionStorage.getItem('safereach_token');
+    if (t) return t;
+    return BYPASS_LOGIN_MODE ? 'bypass_active_session_token' : null;
+  });
+
   const [user, setUser] = useState<User | null>(() => {
     const u = sessionStorage.getItem('safereach_user');
-    return u ? JSON.parse(u) : null;
+    if (u) {
+      try { return JSON.parse(u); } catch { /* ignore */ }
+    }
+    return BYPASS_LOGIN_MODE ? DEFAULT_BYPASS_USER : null;
   });
   const [globalLoading, setGlobalLoading] = useState<boolean>(false);
   const [toasts, setToasts] = useState<Toast[]>([]);
@@ -65,7 +85,47 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     axios.defaults.headers.common['Authorization'] = `Bearer ${jwtToken}`;
   };
 
+  const switchRole = (newRole: 'user' | 'driver' | 'admin') => {
+    let updatedUser: User;
+    if (newRole === 'admin') {
+      updatedUser = {
+        user_id: 1,
+        full_name: 'Administrator',
+        email: 'admin@safereach.com',
+        role: 'admin',
+      };
+    } else if (newRole === 'driver') {
+      updatedUser = {
+        user_id: 2,
+        full_name: 'Driver Ramesh',
+        email: 'driver@safereach.com',
+        role: 'driver',
+        vehicle: {
+          ambulance_id: 101,
+          vehicle_number: 'TN-01-AMB-108',
+          ambulance_type: 'ALS',
+          status: 'online',
+        },
+      };
+    } else {
+      updatedUser = {
+        user_id: 3,
+        full_name: 'Rupesh',
+        email: 'rupesh112599@gmail.com',
+        role: 'user',
+      };
+    }
+    setUser(updatedUser);
+    sessionStorage.setItem('safereach_user', JSON.stringify(updatedUser));
+    showToast('Role Switched', `Active view changed to ${updatedUser.full_name} (${newRole.toUpperCase()})`, 'info');
+  };
+
   const logout = () => {
+    if (BYPASS_LOGIN_MODE) {
+      switchRole('user');
+      showToast("Session Reset", "Bypass mode active. Reset to Citizen view.", "info");
+      return;
+    }
     setToken(null);
     setUser(null);
     setUnreadAlertsCount(0);
@@ -116,6 +176,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         logout,
         updateUserLocal,
         refreshUnreadAlerts,
+        switchRole,
       }}
     >
       {children}
