@@ -25,6 +25,9 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
+      sessionStorage.removeItem('safereach_token');
+      sessionStorage.removeItem('safereach_user');
+      window.location.hash = '#login';
       const isBypass = sessionStorage.getItem('safereach_token')?.includes('bypass');
       if (!isBypass) {
         sessionStorage.removeItem('safereach_token');

@@ -25,3 +25,7 @@ frontend/dist/
 .env
 .env.local
 .env.*
+
+# Backend Secrets & Logs
+backend/config/smtp.php
+backend/logs/

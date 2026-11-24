@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import { AuthProvider, useAuth, BYPASS_LOGIN_MODE } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import CitizenLayout from './components/CitizenLayout';
@@ -46,6 +47,7 @@ const iconMap: Record<string, any> = {
 };
 
 const AppContent: React.FC = () => {
+  const { globalLoading, toasts, user } = useAuth();
   const { globalLoading, toasts, user, switchRole } = useAuth();
 
   // Antigravity Real-time Bridge
@@ -109,6 +111,8 @@ const AppContent: React.FC = () => {
 
       <Routes>
         {/* Public Routes */}
+        <Route path="/" element={<Welcome />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/" element={BYPASS_LOGIN_MODE ? <Navigate to="/citizen" replace /> : <Welcome />} />
         <Route path="/login" element={BYPASS_LOGIN_MODE ? <Navigate to="/citizen" replace /> : <Login />} />
         <Route path="/signup" element={<SignUp />} />

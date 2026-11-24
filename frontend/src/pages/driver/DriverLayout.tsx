@@ -4,6 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import axios from '../../api/axios';
 import {
   LogOut, ShieldAlert, Activity,
+  HelpCircle, Bell,
   Bell,
   MapPin, Navigation, Clock, User
 } from 'lucide-react';

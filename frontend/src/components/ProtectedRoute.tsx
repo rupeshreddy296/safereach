@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import { useAuth, BYPASS_LOGIN_MODE } from '../context/AuthContext';
 
 interface ProtectedRouteProps {
