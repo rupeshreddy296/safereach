@@ -13,3 +13,4 @@ return [
     'from_name'  => 'SafeReach Emergency Response',
     'timeout'    => 5,
 ];
+

@@ -20,3 +20,4 @@ Response::send($result['success'], $result['message'], [
     "smtp_result"  => $result
 ], $result['success'] ? 200 : 500);
 ?>
+

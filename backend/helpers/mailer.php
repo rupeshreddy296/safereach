@@ -230,3 +230,4 @@ class Mailer {
         @file_put_contents($logFile, $entry, FILE_APPEND);
     }
 }
+

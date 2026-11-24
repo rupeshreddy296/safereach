@@ -50,7 +50,6 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [token, setToken] = useState<string | null>(sessionStorage.getItem('safereach_token'));
   const [token, setToken] = useState<string | null>(() => {
     const t = sessionStorage.getItem('safereach_token');
     if (t) return t;
@@ -59,7 +58,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const [user, setUser] = useState<User | null>(() => {
     const u = sessionStorage.getItem('safereach_user');
-    return u ? JSON.parse(u) : null;
     if (u) {
       try { return JSON.parse(u); } catch { /* ignore */ }
     }

@@ -2,8 +2,7 @@ import React from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { 
-  LayoutDashboard, Bell, AlertTriangle, Users, Truck, Building2, 
-  Activity, FileText, Settings, LogOut, Search, ShieldAlert, UserCheck
+  LayoutDashboard, Bell, AlertTriangle, Users, Truck, Building2,
   Activity, FileText, Settings, LogOut, ShieldAlert, UserCheck
 } from 'lucide-react';
 
